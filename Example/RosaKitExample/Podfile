@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target "RosaKitExample" do
+	platform :osx, '10.13'
+	use_frameworks!
+    inhibit_all_warnings!
+
+    pod 'RosaKit', :path => '../../'
+end
+

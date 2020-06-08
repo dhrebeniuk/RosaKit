@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB23845423C0F209001716BE /* RosaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23845223C0F208001716BE /* RosaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB23846123C0F224001716BE /* RosaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23845F23C0F224001716BE /* RosaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB23846B23C0F280001716BE /* pocketfft.c in Sources */ = {isa = PBXBuildFile; fileRef = EB23846923C0F280001716BE /* pocketfft.c */; };
+		EB23846C23C0F280001716BE /* pocketfft.c in Sources */ = {isa = PBXBuildFile; fileRef = EB23846923C0F280001716BE /* pocketfft.c */; };
+		EB23847523C0F29A001716BE /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */; };
+		EB23847623C0F29A001716BE /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */; };
+		EB23847723C0F29A001716BE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847123C0F29A001716BE /* ArrayExtensions.swift */; };
+		EB23847823C0F29A001716BE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847123C0F29A001716BE /* ArrayExtensions.swift */; };
+		EB23847923C0F29A001716BE /* ArrayMatrixExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847223C0F29A001716BE /* ArrayMatrixExtensions.swift */; };
+		EB23847A23C0F29A001716BE /* ArrayMatrixExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847223C0F29A001716BE /* ArrayMatrixExtensions.swift */; };
+		EB23847B23C0F29A001716BE /* ArrayDoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847323C0F29A001716BE /* ArrayDoubleExtensions.swift */; };
+		EB23847C23C0F29A001716BE /* ArrayDoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847323C0F29A001716BE /* ArrayDoubleExtensions.swift */; };
+		EB23847D23C0F29A001716BE /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847423C0F29A001716BE /* DataExtensions.swift */; };
+		EB23847E23C0F29A001716BE /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847423C0F29A001716BE /* DataExtensions.swift */; };
+		EB23848123C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23848023C0F2A6001716BE /* ArrayLibRosaExtensions.swift */; };
+		EB23848223C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23848023C0F2A6001716BE /* ArrayLibRosaExtensions.swift */; };
+		EB23849C23C115ED001716BE /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23846A23C0F280001716BE /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB23849D23C115EE001716BE /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23846A23C0F280001716BE /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB2384BE23C11DD1001716BE /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2384BD23C11DD1001716BE /* WavFileManager.swift */; };
+		EB2384BF23C11DD1001716BE /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2384BD23C11DD1001716BE /* WavFileManager.swift */; };
+		EBA39C9D23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39C9C23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift */; };
+		EBA39C9E23C864D300DC09D6 /* RosaFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39C9C23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB23844F23C0F208001716BE /* RosaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB23845223C0F208001716BE /* RosaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosaKit.h; sourceTree = "<group>"; };
+		EB23845323C0F209001716BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB23845D23C0F224001716BE /* RosaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB23845F23C0F224001716BE /* RosaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosaKit.h; sourceTree = "<group>"; };
+		EB23846023C0F224001716BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB23846923C0F280001716BE /* pocketfft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pocketfft.c; sourceTree = "<group>"; };
+		EB23846A23C0F280001716BE /* pocketfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocketfft.h; sourceTree = "<group>"; };
+		EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		EB23847123C0F29A001716BE /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		EB23847223C0F29A001716BE /* ArrayMatrixExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayMatrixExtensions.swift; sourceTree = "<group>"; };
+		EB23847323C0F29A001716BE /* ArrayDoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDoubleExtensions.swift; sourceTree = "<group>"; };
+		EB23847423C0F29A001716BE /* DataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		EB23848023C0F2A6001716BE /* ArrayLibRosaExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayLibRosaExtensions.swift; sourceTree = "<group>"; };
+		EB2384BD23C11DD1001716BE /* WavFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WavFileManager.swift; sourceTree = "<group>"; };
+		EBA39C9C23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaFloatingPointExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB23844C23C0F208001716BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB23845A23C0F224001716BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB23844223C0F154001716BE = {
+			isa = PBXGroup;
+			children = (
+				EB23844923C0F168001716BE /* Sources */,
+				EB23845123C0F208001716BE /* RosaKitMacOS */,
+				EB23845E23C0F224001716BE /* RosaKitiOS */,
+				EB23845023C0F208001716BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB23844923C0F168001716BE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB23848323C0F2B2001716BE /* SciKit */,
+				EB23847F23C0F29D001716BE /* Rosa */,
+				EB23846F23C0F284001716BE /* NumKit */,
+				EB23849B23C114A2001716BE /* CLibs */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EB23845023C0F208001716BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB23844F23C0F208001716BE /* RosaKit.framework */,
+				EB23845D23C0F224001716BE /* RosaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB23845123C0F208001716BE /* RosaKitMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB23845223C0F208001716BE /* RosaKit.h */,
+				EB23845323C0F209001716BE /* Info.plist */,
+			);
+			path = RosaKitMacOS;
+			sourceTree = "<group>";
+		};
+		EB23845E23C0F224001716BE /* RosaKitiOS */ = {
+			isa = PBXGroup;
+			children = (
+				EB23845F23C0F224001716BE /* RosaKit.h */,
+				EB23846023C0F224001716BE /* Info.plist */,
+			);
+			path = RosaKitiOS;
+			sourceTree = "<group>";
+		};
+		EB23846823C0F273001716BE /* pocketfft */ = {
+			isa = PBXGroup;
+			children = (
+				EB23846923C0F280001716BE /* pocketfft.c */,
+				EB23846A23C0F280001716BE /* pocketfft.h */,
+			);
+			path = pocketfft;
+			sourceTree = "<group>";
+		};
+		EB23846F23C0F284001716BE /* NumKit */ = {
+			isa = PBXGroup;
+			children = (
+				EB23847123C0F29A001716BE /* ArrayExtensions.swift */,
+				EB23847223C0F29A001716BE /* ArrayMatrixExtensions.swift */,
+				EB23847423C0F29A001716BE /* DataExtensions.swift */,
+				EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */,
+			);
+			path = NumKit;
+			sourceTree = "<group>";
+		};
+		EB23847F23C0F29D001716BE /* Rosa */ = {
+			isa = PBXGroup;
+			children = (
+				EB2384BD23C11DD1001716BE /* WavFileManager.swift */,
+				EB23848023C0F2A6001716BE /* ArrayLibRosaExtensions.swift */,
+				EBA39C9C23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift */,
+			);
+			path = Rosa;
+			sourceTree = "<group>";
+		};
+		EB23848323C0F2B2001716BE /* SciKit */ = {
+			isa = PBXGroup;
+			children = (
+				EB23847323C0F29A001716BE /* ArrayDoubleExtensions.swift */,
+			);
+			path = SciKit;
+			sourceTree = "<group>";
+		};
+		EB23849B23C114A2001716BE /* CLibs */ = {
+			isa = PBXGroup;
+			children = (
+				EB23846823C0F273001716BE /* pocketfft */,
+			);
+			path = CLibs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EB23844A23C0F208001716BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB23845423C0F209001716BE /* RosaKit.h in Headers */,
+				EB23849C23C115ED001716BE /* pocketfft.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB23845823C0F224001716BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB23846123C0F224001716BE /* RosaKit.h in Headers */,
+				EB23849D23C115EE001716BE /* pocketfft.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EB23844E23C0F208001716BE /* RosaKitMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB23845523C0F209001716BE /* Build configuration list for PBXNativeTarget "RosaKitMacOS" */;
+			buildPhases = (
+				EB23844A23C0F208001716BE /* Headers */,
+				EB23844B23C0F208001716BE /* Sources */,
+				EB23844C23C0F208001716BE /* Frameworks */,
+				EB23844D23C0F208001716BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RosaKitMacOS;
+			productName = RosaKitMacOS;
+			productReference = EB23844F23C0F208001716BE /* RosaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EB23845C23C0F224001716BE /* RosaKitiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB23846223C0F224001716BE /* Build configuration list for PBXNativeTarget "RosaKitiOS" */;
+			buildPhases = (
+				EB23845823C0F224001716BE /* Headers */,
+				EB23845923C0F224001716BE /* Sources */,
+				EB23845A23C0F224001716BE /* Frameworks */,
+				EB23845B23C0F224001716BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RosaKitiOS;
+			productName = RosaKitiOS;
+			productReference = EB23845D23C0F224001716BE /* RosaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB23844323C0F154001716BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					EB23844E23C0F208001716BE = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+					EB23845C23C0F224001716BE = {
+						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = EB23844623C0F154001716BE /* Build configuration list for PBXProject "RosaKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB23844223C0F154001716BE;
+			productRefGroup = EB23845023C0F208001716BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB23844E23C0F208001716BE /* RosaKitMacOS */,
+				EB23845C23C0F224001716BE /* RosaKitiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB23844D23C0F208001716BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB23845B23C0F224001716BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB23844B23C0F208001716BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2384BE23C11DD1001716BE /* WavFileManager.swift in Sources */,
+				EB23847523C0F29A001716BE /* FloatingPointExtensions.swift in Sources */,
+				EB23847B23C0F29A001716BE /* ArrayDoubleExtensions.swift in Sources */,
+				EB23847723C0F29A001716BE /* ArrayExtensions.swift in Sources */,
+				EBA39C9D23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift in Sources */,
+				EB23848123C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */,
+				EB23847923C0F29A001716BE /* ArrayMatrixExtensions.swift in Sources */,
+				EB23846B23C0F280001716BE /* pocketfft.c in Sources */,
+				EB23847D23C0F29A001716BE /* DataExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB23845923C0F224001716BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2384BF23C11DD1001716BE /* WavFileManager.swift in Sources */,
+				EB23847623C0F29A001716BE /* FloatingPointExtensions.swift in Sources */,
+				EB23847C23C0F29A001716BE /* ArrayDoubleExtensions.swift in Sources */,
+				EB23847823C0F29A001716BE /* ArrayExtensions.swift in Sources */,
+				EBA39C9E23C864D300DC09D6 /* RosaFloatingPointExtensions.swift in Sources */,
+				EB23848223C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */,
+				EB23847A23C0F29A001716BE /* ArrayMatrixExtensions.swift in Sources */,
+				EB23846C23C0F280001716BE /* pocketfft.c in Sources */,
+				EB23847E23C0F29A001716BE /* DataExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EB23844723C0F155001716BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sources/clibs/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "";
+			};
+			name = Debug;
+		};
+		EB23844823C0F155001716BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Sources/clibs/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "";
+			};
+			name = Release;
+		};
+		EB23845623C0F209001716BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RosaKitMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobacorn.RosaKitMacOS;
+				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB23845723C0F209001716BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RosaKitMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobacorn.RosaKitMacOS;
+				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EB23846323C0F224001716BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RosaKitiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobacorn.RosaKitiOS;
+				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EB23846423C0F224001716BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RosaKitiOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobacorn.RosaKitiOS;
+				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB23844623C0F154001716BE /* Build configuration list for PBXProject "RosaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB23844723C0F155001716BE /* Debug */,
+				EB23844823C0F155001716BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB23845523C0F209001716BE /* Build configuration list for PBXNativeTarget "RosaKitMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB23845623C0F209001716BE /* Debug */,
+				EB23845723C0F209001716BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB23846223C0F224001716BE /* Build configuration list for PBXNativeTarget "RosaKitiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB23846323C0F224001716BE /* Debug */,
+				EB23846423C0F224001716BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB23844323C0F154001716BE /* Project object */;
+}
