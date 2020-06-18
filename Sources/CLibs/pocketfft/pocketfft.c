@@ -1491,14 +1491,15 @@ int execute_real_forward(const double *a1, double *resultMatrix, int cols, int r
     size_t npts = odim[ndim - 1];
     
     size_t tdim[] = {0, 0};
-    for (int d=0; d<ndim-1; ++d)
-      tdim[d] = odim[d];
+    for (int d=0; d<ndim-1; ++d) {
+        tdim[d] = odim[d];
+    }
     
     tdim[1] = npts/2 + 1; // = 128 [129, 65]
     
     double *ret = resultMatrix;//calloc((tdim[1])*tdim[0], sizeof(cmplx)); // 129*65 = 8385
     if (!fail) {
-        size_t rstep = 2*((tdim[0]*2 - 1)*2 - 1);//rows*2;//PyArray_DIM(ret, PyArray_NDIM(ret) - 1)*2; -> PyArray_DIM(ret, 1)*2
+        size_t rstep = tdim[1]*2; //rows*2;//PyArray_DIM(ret, PyArray_NDIM(ret) - 1)*2; -> PyArray_DIM(ret, 1)*2
 
         int nrepeats = cols*rows/npts;//PyArray_SIZE(data)/npts;// -> 256*65/npts = 65
         double *rptr = (double *)(ret),

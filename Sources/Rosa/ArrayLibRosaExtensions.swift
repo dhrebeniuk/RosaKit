@@ -84,12 +84,12 @@ public extension Array where Element == Double {
 
         let matrix = FFTWindow.multiplyVector(matrix: yFrames)
                 
-        let rfftMatrix = matrix.transposed.rfft
+        let rfftMatrix = matrix.rfft
         
         let itemLength = matrix.count/2 + 1
                 
-        let result = rfftMatrix.map { $0 }.compactMap { $0 }.chunked(into: itemLength).transposed
-              
+        let result = rfftMatrix
+        
         return result
     }
     
@@ -103,14 +103,15 @@ public extension Array where Element == Double {
 
 extension Array where Element == [Double] {
     
-    var rfft: [Double] {
-        let cols = self.count
-        let rows = self.first?.count ?? 1
+    var rfft: [[Double]] {
+        let transposed = self.transposed
+        let cols = transposed.count
+        let rows = transposed.first?.count ?? 1
         let rfftRows = rows/2 + 1
-        let flatMatrix = self.flatMap { $0 }
+        let flatMatrix = transposed.flatMap { $0 }
         
         let rfftCount = rfftRows*cols
-        var resultComplexMatrix = [Double](repeating: 0.0, count: (rfftCount + cols*4)*2)
+        var resultComplexMatrix = [Double](repeating: 0.0, count: (rfftCount + cols + 1)*2)
                         
         resultComplexMatrix.withUnsafeMutableBytes { destinationData -> Void in
             let destinationDoubleData = destinationData.bindMemory(to: Double.self).baseAddress
@@ -123,10 +124,14 @@ extension Array where Element == [Double] {
         var realMatrix = [Double](repeating: 0.0, count: rfftCount)
 
         for index in 0..<rfftCount {
-            realMatrix[index] = sqrt(pow(resultComplexMatrix[index*2], 2) + pow(resultComplexMatrix[index*2+1], 2))
+            let real = resultComplexMatrix[index*2]
+            let imagine = resultComplexMatrix[index*2+1]
+            realMatrix[index] = sqrt(pow(real, 2) + pow(imagine, 2))
         }
+        
+        let result = realMatrix.chunked(into: rfftRows).transposed
             
-        return realMatrix
+        return result
     }
     
     public func normalizeAudioPowerArray() -> [[Double]] {
