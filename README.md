@@ -1,6 +1,6 @@
 # RosaKit
 
-RosaKit - LibRosa port to Swift for ability using same prepossessing logic in iOS/MacOS platforms.
+RosaKit - LibRosa port to Swift for iOS and macOS platforms.
 
 Library can generate Mel-spectrogram using Short-time Fourier transform (STFT) algorithm.
 
@@ -9,7 +9,7 @@ It's provide methods for calcualte Short-time Fourier transform window and Spect
 ## Installation
 Via [CocoaPods](http://cocoapods.org):
 ```ruby
-pod 'RosaKit', :git => 'https://github.com/RosaKit/RosaKit.git'
+pod 'RosaKit', :git => 'https://github.com/dhrebeniuk/RosaKit.git'
 
 ```
 

@@ -44,7 +44,7 @@ public class WavFileManager {
                 throw ReadError.fail
             }
             
-            let chunkSize = rawPointer.load(fromByteOffset: 4, as: UInt32.self) - 36
+            var chunkSize = rawPointer.load(fromByteOffset: 4, as: UInt32.self) - 36
                         
             let WAVELabel = String(bytes: bytes[8..<12], encoding: .utf8)
             guard WAVELabel == "WAVE" else {
@@ -56,7 +56,7 @@ public class WavFileManager {
                 throw ReadError.fail
             }
             
-            _ = rawPointer.load(fromByteOffset: 16, as: Int32.self)
+            let subChunkSize = rawPointer.load(fromByteOffset: 16, as: Int32.self)
             
             let format = rawPointer.load(fromByteOffset: 20, as: Int16.self)
             guard format == 1 else {
@@ -87,7 +87,7 @@ public class WavFileManager {
                 throw ReadError.nonSupportedSampleRate
             }
             
-            _ = rawPointer.load(fromByteOffset: 30, as: Int16.self)
+            let blockAling = rawPointer.load(fromByteOffset: 30, as: Int16.self)
             let bytesPerSample = rawPointer.load(fromByteOffset: 32, as: Int16.self)
 
             let dataLabel = String(bytes: bytes[36..<40], encoding: .utf8)
@@ -102,9 +102,9 @@ public class WavFileManager {
         
     }
     
-    public func createWavFile(using rawData: Data, atURL url: URL, sampleRate: Int) throws {
+    public func createWavFile(using rawData: Data, atURL url: URL, sampleRate: Int, channels: Int = 1) throws {
         //Prepare Wav file header
-        let waveHeaderFormate = createWaveHeader(data: rawData, sampleRate: sampleRate) as Data
+        let waveHeaderFormate = createWaveHeader(data: rawData, sampleRate: sampleRate, channels: channels) as Data
 
         //Prepare Final Wav File Data
         let waveFileData = waveHeaderFormate + rawData
@@ -113,12 +113,12 @@ public class WavFileManager {
         try storeMusicFile(data: waveFileData, atURL: url)
     }
 
-    private func createWaveHeader(data: Data, sampleRate: Int) -> NSData {
+    private func createWaveHeader(data: Data, sampleRate: Int, channels channelsCount: Int = 1) -> NSData {
         let sampleRate: Int32 = Int32(sampleRate)
         let chunkSize: Int32 = 36 + Int32(data.count)
         let subChunkSize: Int32 = 16
         let format: Int16 = 1
-        let channels: Int16 = 1
+        let channels: Int16 = Int16(channelsCount)
         let bytesPerSample: Int16 = 16
         let byteRate: Int32 = sampleRate * Int32(channels * bytesPerSample / 8)
         let blockAlign: Int16 = channels * bytesPerSample / 8

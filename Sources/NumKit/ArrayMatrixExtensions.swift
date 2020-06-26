@@ -70,29 +70,7 @@ public extension Array {
         
         return result
     }
-    
-    static func RFFT(matrix: [[Double]]) -> [[Double]] {
-        let newMatrixCols = matrix.count
-        let newMatrixRows = matrix.first?.count ?? 1
 
-        let flatMatrix = matrix.flatMap { return $0 }
-        
-        let size = (1 + newMatrixCols/2)*newMatrixRows
-        let length = vDSP_Length(pow(2, floor(log2(Float(size)))))
-
-        let setup = vDSP_DFT_zop_CreateSetupD(nil, length, vDSP_DFT_Direction.FORWARD)
-
-        let inputImaginary = [Double](repeating: 0.0, count: flatMatrix.count)
-        var outputImaginary = [Double](repeating: 0.0, count: size)
-        var outputReal = [Double](repeating: 0.0, count: size)
-
-        vDSP_DFT_ExecuteD(setup!, flatMatrix, inputImaginary, &outputReal, &outputImaginary)
-
-        let matrixResult = outputReal.chunked(into: newMatrixRows)
-
-        return matrixResult
-    }
-    
     func chunked(into size: Int) -> [[Element]] {
         return stride(from: 0, to: count, by: size).map {
             Array(self[$0 ..< Swift.min($0 + size, count)])

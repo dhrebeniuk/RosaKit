@@ -46,4 +46,16 @@ public extension Data {
         }
     }
     
+    var float32Array: [Float] {
+        return self.withUnsafeBytes { rawPointer -> [Float] in
+            let words = rawPointer.bindMemory(to: Float32.self)
+            var array: [Float] = []
+            for index in 0..<words.count {
+                array.append(Float(words[index]))
+            }
+            
+            return array
+        }
+    }
+    
 }
