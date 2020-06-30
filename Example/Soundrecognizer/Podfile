@@ -1,0 +1,21 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target "SoundRecognizer" do
+    platform :ios, '13.0'
+    use_frameworks!
+    inhibit_all_warnings!
+	
+    pod 'RosaKit', :path => '../../'
+
+end
+
+target "SoundRecognizerTests" do
+    platform :ios, '13.0'
+    use_frameworks!
+    inhibit_all_warnings!
+  
+    pod 'RosaKit', :path => '../../'
+
+end
+
+

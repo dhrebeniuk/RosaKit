@@ -1,0 +1,11 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+*.xcodeproj/xcuserdata/*
+*.xcworkspace/xcuserdata/*
+*.xcuserdatad
+*.xcscmblueprint
+
+build/*
+Pods/*
+fastlane
+IDEWorkspaceChecks.plist
