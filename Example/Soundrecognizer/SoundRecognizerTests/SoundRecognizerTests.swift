@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import CoreML
 import RosaKit
 import SoundRecognizer
 
@@ -46,6 +45,5 @@ class SoundRecognizerTests: XCTestCase {
         
         XCTAssertTrue(isCorrect)
     }
-
 
 }

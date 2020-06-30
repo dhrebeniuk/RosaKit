@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		351D2E3704DF694BAEC558C8 /* Pods_SoundRecognizerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FCC4317AFA80E8C3317205 /* Pods_SoundRecognizerTests.framework */; };
 		4E72075E7065F22CABF6D2CB /* Pods_SoundRecognizer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B69F0EACD5C7E4A41F7545 /* Pods_SoundRecognizer.framework */; };
-		EB2384C223C122D1001716BE /* RealtimeRecognitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2384C123C122D1001716BE /* RealtimeRecognitionView.swift */; };
 		EB6013E423B6168900DDCB3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6013E323B6168900DDCB3D /* AppDelegate.swift */; };
 		EB6013E623B6168900DDCB3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6013E523B6168900DDCB3D /* SceneDelegate.swift */; };
 		EB6013E823B6168900DDCB3D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6013E723B6168900DDCB3D /* MainView.swift */; };
@@ -59,7 +58,6 @@
 		77B69F0EACD5C7E4A41F7545 /* Pods_SoundRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundRecognizer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAC6FA5DAA6215ECF071596 /* Pods-SoundRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundRecognizer.debug.xcconfig"; path = "Target Support Files/Pods-SoundRecognizer/Pods-SoundRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
 		C1675D7378A9551D22CF19E8 /* Pods-SoundRecognizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundRecognizerTests.release.xcconfig"; path = "Target Support Files/Pods-SoundRecognizerTests/Pods-SoundRecognizerTests.release.xcconfig"; sourceTree = "<group>"; };
-		EB2384C123C122D1001716BE /* RealtimeRecognitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeRecognitionView.swift; sourceTree = "<group>"; };
 		EB6013E023B6168900DDCB3D /* SoundRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6013E323B6168900DDCB3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB6013E523B6168900DDCB3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,14 +108,6 @@
 				04FCC4317AFA80E8C3317205 /* Pods_SoundRecognizerTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EB2384C023C122B7001716BE /* RealtimeRecognition */ = {
-			isa = PBXGroup;
-			children = (
-				EB2384C123C122D1001716BE /* RealtimeRecognitionView.swift */,
-			);
-			path = RealtimeRecognition;
 			sourceTree = "<group>";
 		};
 		EB6013D723B6168900DDCB3D = {
@@ -204,7 +194,6 @@
 		EB60142523B6516F00DDCB3D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				EB2384C023C122B7001716BE /* RealtimeRecognition */,
 				EB60142623B6517700DDCB3D /* Main */,
 			);
 			path = Screens;
@@ -432,7 +421,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB6013E423B6168900DDCB3D /* AppDelegate.swift in Sources */,
-				EB2384C223C122D1001716BE /* RealtimeRecognitionView.swift in Sources */,
 				EBCD0E6024A4DD8C002737F4 /* CategoryRepository.swift in Sources */,
 				EB6013E623B6168900DDCB3D /* SceneDelegate.swift in Sources */,
 				EB60142123B63EBF00DDCB3D /* AudioSampler.swift in Sources */,
