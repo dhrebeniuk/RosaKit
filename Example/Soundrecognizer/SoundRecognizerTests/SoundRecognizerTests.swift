@@ -21,16 +21,18 @@ class SoundRecognizerTests: XCTestCase {
     }
 
     func testRecognizer() throws {
-        let url = Bundle(for: Self.self).url(forResource: "4-150364-A-46", withExtension: "wav")
+        let url = Bundle(for: Self.self).url(forResource: "1-137-A-32", withExtension: "wav")
 
         let soundFile = url.flatMap { try? WavFileManager().readWavFile(at: $0) }
 
         let int16Array = soundFile?.data.int16Array.map { Double($0)/32768.0 }
         
         let xshape = int16Array?.count ?? 0
-        let size = 2048*20
-        let offset = size/8
-        let count = xshape/offset - 8
+        let size = 2048*30
+        let offset = size/16
+        let count = xshape/offset - 30/2
+        
+        let validCategory = 32
         
         let soundRecognizerEngine = SoundRecognizerEngine(sampleRate: 44100)
         
@@ -40,7 +42,7 @@ class SoundRecognizerTests: XCTestCase {
             let samples = Array(int16Array?[offset*index..<offset*index + size] ?? [])
             let result = soundRecognizerEngine.predict(samples: samples)
             
-            isCorrect = (result?.percentage ?? 0.0) > 0.95 && (result?.category ?? -1) == 46
+            isCorrect = (result?.percentage ?? 0.0) > 0.95 && ((result?.category ?? -1) % 100) == validCategory
         }
         
         XCTAssertTrue(isCorrect)

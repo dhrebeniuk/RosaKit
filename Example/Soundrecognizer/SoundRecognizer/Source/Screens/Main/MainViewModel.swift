@@ -27,7 +27,7 @@ class MainViewModel: ObservableObject {
     var lstm_2_c_out: MLMultiArray? = nil
     var lstm_2_h_out: MLMultiArray? = nil
     
-    let soundRecognizerEngine = SoundRecognizerEngine(sampleRate: 22050)
+    let soundRecognizerEngine = SoundRecognizerEngine(sampleRate: 44100)
     
     func setup() {
         
@@ -37,12 +37,16 @@ class MainViewModel: ObservableObject {
         microphoneReader.startReading { [weak self] samples in
             guard let `self` = self else { return }
             
-            if let result = self.soundRecognizerEngine.predict(samples: samples) {
-                if result.0 > 0.4 {
-                    DispatchQueue.main.sync {
-                        self.categoryIndex = result.category
-                        self.categoryTitle = result.title
-                        self.percentage = Int(round(result.percentage*100))
+            operationQueue.waitUntilAllOperationsAreFinished()
+            
+            operationQueue.addOperation {
+                if let result = self.soundRecognizerEngine.predict(samples: samples) {
+                    if result.0 > 0.4 {
+                        DispatchQueue.main.sync {
+                            self.categoryIndex = result.category
+                            self.categoryTitle = result.title
+                            self.percentage = Int(round(result.percentage*100))
+                        }
                     }
                 }
             }
