@@ -44,7 +44,7 @@ public class WavFileManager {
                 throw ReadError.fail
             }
             
-            var chunkSize = rawPointer.load(fromByteOffset: 4, as: UInt32.self) - 36
+            let chunkSize = rawPointer.load(fromByteOffset: 4, as: UInt32.self) - 36
                         
             let WAVELabel = String(bytes: bytes[8..<12], encoding: .utf8)
             guard WAVELabel == "WAVE" else {
@@ -56,7 +56,7 @@ public class WavFileManager {
                 throw ReadError.fail
             }
             
-            let subChunkSize = rawPointer.load(fromByteOffset: 16, as: Int32.self)
+            _ = rawPointer.load(fromByteOffset: 16, as: Int32.self)
             
             let format = rawPointer.load(fromByteOffset: 20, as: Int16.self)
             guard format == 1 else {
@@ -87,7 +87,7 @@ public class WavFileManager {
                 throw ReadError.nonSupportedSampleRate
             }
             
-            let blockAling = rawPointer.load(fromByteOffset: 30, as: Int16.self)
+            _ = rawPointer.load(fromByteOffset: 30, as: Int16.self)
             let bytesPerSample = rawPointer.load(fromByteOffset: 32, as: Int16.self)
 
             let dataLabel = String(bytes: bytes[36..<40], encoding: .utf8)

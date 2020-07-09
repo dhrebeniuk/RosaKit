@@ -52,7 +52,7 @@ public extension Array where Iterator.Element: FloatingPoint {
         return weights
     }
 
-    func powerToDB(ref: Element = Element(1), amin: Element = Element(1)/Element(10000000000), topDB: Element = Element(80)) -> [Element] {
+    func powerToDB(ref: Element = Element(1), amin: Element = Element(1)/Element(Int64(10000000000)), topDB: Element = Element(80)) -> [Element] {
         let ten = Element(10)
         
         let logSpec = map { ten * (Swift.max(amin, $0)).logarithm10() - ten * (Swift.max(amin, abs(ref))).logarithm10() }
@@ -85,9 +85,7 @@ public extension Array where Element == Double {
         let matrix = FFTWindow.multiplyVector(matrix: yFrames)
                 
         let rfftMatrix = matrix.rfft
-        
-        let itemLength = matrix.count/2 + 1
-                
+                        
         let result = rfftMatrix
         
         return result
