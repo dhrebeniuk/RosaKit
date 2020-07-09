@@ -9,7 +9,7 @@ It's provide methods for calcualte Short-time Fourier transform window and Spect
 ## Installation
 Via [CocoaPods](http://cocoapods.org):
 ```ruby
-pod 'RosaKit', :git => 'https://github.com/dhrebeniuk/RosaKit.git'
+pod 'RosaKit'
 
 ```
 
