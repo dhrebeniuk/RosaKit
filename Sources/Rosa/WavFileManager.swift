@@ -14,6 +14,7 @@ public class WavFileManager {
         public let sampleRate: Int
         public let bytesPerSample: Int
         public let sampleSize: Int
+        public let channels: Int
 
         public let data: Data
     }
@@ -33,6 +34,8 @@ public class WavFileManager {
     public func readWavFile(at url: URL) throws -> WAVFileDesriptor {
         let data = try Data(contentsOf: url)
         
+        let dataSize = Int(data.count)
+                
         return try data.withUnsafeBytes { rawPointer -> WAVFileDesriptor in
             let bytes = rawPointer.bindMemory(to: UInt8.self)
 
@@ -64,14 +67,11 @@ public class WavFileManager {
             }
             
             let channels = rawPointer.load(fromByteOffset: 22, as: Int16.self)
-            guard channels == 1 else {
-                throw ReadError.supportOneChannel
-            }
             
             let sampleRate = rawPointer.load(fromByteOffset: 24, as: Int32.self)
             let byteRate = rawPointer.load(fromByteOffset: 28, as: Int32.self)
 
-            guard byteRate/sampleRate == 2 else {
+            guard byteRate/sampleRate == 2 || byteRate/sampleRate == 4 else {
                 throw ReadError.supportOnly16bitChannel
             }
             
@@ -82,6 +82,9 @@ public class WavFileManager {
             }
             else if sampleRate == 44100 {
                 sampleSize = 512
+            }
+            else if sampleRate == 48000 {
+                sampleSize = 960
             }
             else {
                 throw ReadError.nonSupportedSampleRate
@@ -95,9 +98,9 @@ public class WavFileManager {
                 throw ReadError.fail
             }
                         
-            let data = Data(bytes[44..<(44 + Int(chunkSize))])
+            let data = Data(bytes[44..<(44 + Int(min(chunkSize, UInt32(dataSize-44))))])
             
-            return WAVFileDesriptor(sampleRate: Int(sampleRate), bytesPerSample: Int(bytesPerSample), sampleSize: Int(sampleSize), data: data)
+            return WAVFileDesriptor(sampleRate: Int(sampleRate), bytesPerSample: Int(bytesPerSample), sampleSize: Int(sampleSize), channels: Int(channels), data: data)
         }
         
     }
