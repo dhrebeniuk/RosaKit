@@ -20,12 +20,15 @@
 		EB60142223B63EBF00DDCB3D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60141F23B63EBF00DDCB3D /* AudioRecorder.swift */; };
 		EB60142423B63EDB00DDCB3D /* MicrophoneReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60142323B63EDB00DDCB3D /* MicrophoneReader.swift */; };
 		EB60142823B6518C00DDCB3D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB60142723B6518C00DDCB3D /* MainViewModel.swift */; };
+		EB6B9CB924DDE64A004E6BD9 /* 1-47250-A-41.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB6B9CB824DDE64A004E6BD9 /* 1-47250-A-41.wav */; };
+		EBB82EF924DCA9000039D1BB /* 1-48298-A-46.wav in Resources */ = {isa = PBXBuildFile; fileRef = EBB82EF824DCA9000039D1BB /* 1-48298-A-46.wav */; };
 		EBB9D82524AB5A7800A3890E /* SoundRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9D82424AB5A7800A3890E /* SoundRecognizerTests.swift */; };
 		EBB9D83524AB5E8E00A3890E /* 1-137-A-32.wav in Resources */ = {isa = PBXBuildFile; fileRef = EBB9D83424AB5E8E00A3890E /* 1-137-A-32.wav */; };
 		EBB9D83724AB5EDA00A3890E /* 4-150364-A-46.wav in Resources */ = {isa = PBXBuildFile; fileRef = EBB9D83624AB5EDA00A3890E /* 4-150364-A-46.wav */; };
 		EBCD0E5B24A47AFE002737F4 /* SoundRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBCD0E5A24A47AFE002737F4 /* SoundRecognition.mlmodel */; };
 		EBCD0E6024A4DD8C002737F4 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD0E5F24A4DD8C002737F4 /* CategoryRepository.swift */; };
 		EBCD0E6224A4DDED002737F4 /* SoundRecognizerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD0E6124A4DDED002737F4 /* SoundRecognizerEngine.swift */; };
+		EBF20C0324C59C8700AD668D /* 1-84393-A-32.wav in Resources */ = {isa = PBXBuildFile; fileRef = EBF20C0224C59C8700AD668D /* 1-84393-A-32.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,8 @@
 		EB60141F23B63EBF00DDCB3D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		EB60142323B63EDB00DDCB3D /* MicrophoneReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneReader.swift; sourceTree = "<group>"; };
 		EB60142723B6518C00DDCB3D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		EB6B9CB824DDE64A004E6BD9 /* 1-47250-A-41.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-47250-A-41.wav"; sourceTree = "<group>"; };
+		EBB82EF824DCA9000039D1BB /* 1-48298-A-46.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-48298-A-46.wav"; sourceTree = "<group>"; };
 		EBB9D82224AB5A7800A3890E /* SoundRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB9D82424AB5A7800A3890E /* SoundRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecognizerTests.swift; sourceTree = "<group>"; };
 		EBB9D82624AB5A7800A3890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 		EBCD0E5A24A47AFE002737F4 /* SoundRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SoundRecognition.mlmodel; sourceTree = "<group>"; };
 		EBCD0E5F24A4DD8C002737F4 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		EBCD0E6124A4DDED002737F4 /* SoundRecognizerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecognizerEngine.swift; sourceTree = "<group>"; };
+		EBF20C0224C59C8700AD668D /* 1-84393-A-32.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-84393-A-32.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +217,10 @@
 		EBB9D82324AB5A7800A3890E /* SoundRecognizerTests */ = {
 			isa = PBXGroup;
 			children = (
+				EB6B9CB824DDE64A004E6BD9 /* 1-47250-A-41.wav */,
+				EBB82EF824DCA9000039D1BB /* 1-48298-A-46.wav */,
 				EBB9D83624AB5EDA00A3890E /* 4-150364-A-46.wav */,
+				EBF20C0224C59C8700AD668D /* 1-84393-A-32.wav */,
 				EBB9D83424AB5E8E00A3890E /* 1-137-A-32.wav */,
 				EBB9D82424AB5A7800A3890E /* SoundRecognizerTests.swift */,
 				EBB9D82624AB5A7800A3890E /* Info.plist */,
@@ -328,6 +337,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB9D83724AB5EDA00A3890E /* 4-150364-A-46.wav in Resources */,
+				EBF20C0324C59C8700AD668D /* 1-84393-A-32.wav in Resources */,
+				EBB82EF924DCA9000039D1BB /* 1-48298-A-46.wav in Resources */,
+				EB6B9CB924DDE64A004E6BD9 /* 1-47250-A-41.wav in Resources */,
 				EBB9D83524AB5E8E00A3890E /* 1-137-A-32.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

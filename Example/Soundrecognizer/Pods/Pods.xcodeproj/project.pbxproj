@@ -10,22 +10,22 @@
 		020669E1419DE1A01C30DD7EE7A88ACA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		02AE12165381E6E66C255AF3F159A86C /* Pods-SoundRecognizerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B614F971FCB2735DCC740121DFD877B0 /* Pods-SoundRecognizerTests-dummy.m */; };
 		0AFE1BB1A46DD32D2EFC31CE7F479493 /* Pods-SoundRecognizer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45D027A01952CD38280AA596A739F27B /* Pods-SoundRecognizer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D0E8E6B2AFF46B29A8DBC901C7401A2 /* pocketfft.c in Sources */ = {isa = PBXBuildFile; fileRef = 914350BF29EF928AF2087F21E3BE36D2 /* pocketfft.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0F2D70CD05A98A050E77B9A1F79FF99B /* RosaFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76785242A2B27E1E16CD023CF4999B9B /* RosaFloatingPointExtensions.swift */; };
-		3D030D41BBD174F5C68C861FAB58041C /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC776CBE15A06A867F74B1A81C1856 /* DataExtensions.swift */; };
-		507A2F8111636D40A7ACF23B3B214078 /* RosaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5EED3936FC1DAE2042EB16ADF7806F /* RosaKit-dummy.m */; };
-		5C0303AE43D51EB99B7F058DE32F3FED /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A2406F768F338B433A83377DB0F2B /* ArrayLibRosaExtensions.swift */; };
+		0D0E8E6B2AFF46B29A8DBC901C7401A2 /* pocketfft.c in Sources */ = {isa = PBXBuildFile; fileRef = 3879E1EA5C0EE7A3D3D8581055CC9A4B /* pocketfft.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F2D70CD05A98A050E77B9A1F79FF99B /* RosaFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD1A9A4CA259C8E412F2E845CE9907 /* RosaFloatingPointExtensions.swift */; };
+		3D030D41BBD174F5C68C861FAB58041C /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A3303E3C7027D08960CD0287F010E9 /* DataExtensions.swift */; };
+		507A2F8111636D40A7ACF23B3B214078 /* RosaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5765358146E26A0F725127FDA9837BD0 /* RosaKit-dummy.m */; };
+		5C0303AE43D51EB99B7F058DE32F3FED /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9547A8E576DD857CC8721229BBDB4 /* ArrayLibRosaExtensions.swift */; };
 		63A1E332E077FCCB26E972A5AC3B7AE8 /* Pods-SoundRecognizer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 415532DDC3C6959B67949656AFF26D49 /* Pods-SoundRecognizer-dummy.m */; };
 		6A980D56AE0747EC1789940CB2152133 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		6AC7F7495EDFB4055FFCA0943F8DCE01 /* ArrayMatrixExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE020AFC2E357E875DE4EE7B5B5426 /* ArrayMatrixExtensions.swift */; };
-		6BB57E30F4E974B1B644337AD7802DF7 /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6EB7A039806EE45A85142DC0A3B11 /* FloatingPointExtensions.swift */; };
-		A69F85E8E7F966F196269AFDAFED5133 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24623FC5266B13FA6C85D77B9F79A610 /* ArrayExtensions.swift */; };
-		B1BB0035B47071FEE7CD2D8E3248C147 /* RosaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FDA1CBA7D5BE4CE19C8BE34B74F8835 /* RosaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9CFBAFA31BFBE1CEFAE58A8253CF51F /* ArrayDoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E94018032C38B75E6ADACC10CDA6E96 /* ArrayDoubleExtensions.swift */; };
+		6AC7F7495EDFB4055FFCA0943F8DCE01 /* ArrayMatrixExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD68057E1864EB1D132604E6EC7B8B /* ArrayMatrixExtensions.swift */; };
+		6BB57E30F4E974B1B644337AD7802DF7 /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FCA73BE8D40C58DB7892DD0DA3408C /* FloatingPointExtensions.swift */; };
+		A69F85E8E7F966F196269AFDAFED5133 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1EA57DBF8B17EB42EFBBEE977F2058 /* ArrayExtensions.swift */; };
+		B1BB0035B47071FEE7CD2D8E3248C147 /* RosaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9279577D9A5BCBDE3344A21DAD3EAA88 /* RosaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9CFBAFA31BFBE1CEFAE58A8253CF51F /* ArrayDoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035D25553EE4BF6B10C56839F41DD3D4 /* ArrayDoubleExtensions.swift */; };
 		BDDEF9160FC3C2521C43752CD8B1B54A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		CF06CB3FAB96CB77D3E95BA88E6A1C50 /* Pods-SoundRecognizerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3B7C230B093946C136B4B5B64D1B03 /* Pods-SoundRecognizerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1AA4C735C8C45202BF79578F32DA076 /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0797F9235F371F30BD9F92A9CFC468D2 /* WavFileManager.swift */; };
-		FC6CE06DB64F2CA9F72E129FD5564F19 /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = EB0809A200C3BD8E1CC4B4847E5ED16D /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1AA4C735C8C45202BF79578F32DA076 /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1419054DD532772A01B0B3CD004EC1 /* WavFileManager.swift */; };
+		FC6CE06DB64F2CA9F72E129FD5564F19 /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = B77C38404F7FA55BC064C198788647C1 /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,46 +47,47 @@
 
 /* Begin PBXFileReference section */
 		019D6EA458D343C126FEDB682CFADB5F /* Pods-SoundRecognizer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoundRecognizer-frameworks.sh"; sourceTree = "<group>"; };
-		04B6B9F68ABF156D809FB89E293186D7 /* RosaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RosaKit.modulemap; sourceTree = "<group>"; };
-		0797F9235F371F30BD9F92A9CFC468D2 /* WavFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WavFileManager.swift; sourceTree = "<group>"; };
+		035D25553EE4BF6B10C56839F41DD3D4 /* ArrayDoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayDoubleExtensions.swift; sourceTree = "<group>"; };
+		04B9547A8E576DD857CC8721229BBDB4 /* ArrayLibRosaExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayLibRosaExtensions.swift; sourceTree = "<group>"; };
 		0FD3D393FD752CF4E05097A9CB63DDC5 /* Pods_SoundRecognizerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SoundRecognizerTests.framework; path = "Pods-SoundRecognizerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C3446E89B244366F0A7E8F34E9878F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1CB20F3AF721F6C643FF5FC5691DFB40 /* Pods-SoundRecognizerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SoundRecognizerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1E94018032C38B75E6ADACC10CDA6E96 /* ArrayDoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayDoubleExtensions.swift; sourceTree = "<group>"; };
 		2222E7DA39C88B764AF44A1AB48DF00F /* Pods-SoundRecognizer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SoundRecognizer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		24623FC5266B13FA6C85D77B9F79A610 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3367476107DDD00BC0904235A21F3941 /* RosaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RosaKit.framework; path = RosaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3879E1EA5C0EE7A3D3D8581055CC9A4B /* pocketfft.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pocketfft.c; sourceTree = "<group>"; };
+		38BD1A9A4CA259C8E412F2E845CE9907 /* RosaFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RosaFloatingPointExtensions.swift; sourceTree = "<group>"; };
+		405F0DA22793C7F8CEE6B27DED215B0D /* RosaKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RosaKit-Info.plist"; sourceTree = "<group>"; };
 		415532DDC3C6959B67949656AFF26D49 /* Pods-SoundRecognizer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SoundRecognizer-dummy.m"; sourceTree = "<group>"; };
 		45D027A01952CD38280AA596A739F27B /* Pods-SoundRecognizer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SoundRecognizer-umbrella.h"; sourceTree = "<group>"; };
 		4B3B7C230B093946C136B4B5B64D1B03 /* Pods-SoundRecognizerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SoundRecognizerTests-umbrella.h"; sourceTree = "<group>"; };
-		4BA6EB7A039806EE45A85142DC0A3B11 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		5765358146E26A0F725127FDA9837BD0 /* RosaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RosaKit-dummy.m"; sourceTree = "<group>"; };
 		59A199F2B9C805192F8CD3A379B34E79 /* Pods-SoundRecognizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoundRecognizer.debug.xcconfig"; sourceTree = "<group>"; };
-		5FDA1CBA7D5BE4CE19C8BE34B74F8835 /* RosaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RosaKit-umbrella.h"; sourceTree = "<group>"; };
+		67E64B2C34503ACBF42FBD0A55546490 /* RosaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RosaKit.release.xcconfig; sourceTree = "<group>"; };
+		6ADD68057E1864EB1D132604E6EC7B8B /* ArrayMatrixExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayMatrixExtensions.swift; sourceTree = "<group>"; };
 		6C89F44CE83BFD66F9A903DF57BC9E95 /* Pods-SoundRecognizer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoundRecognizer-Info.plist"; sourceTree = "<group>"; };
-		72ABEC2C14C9A7B54D857C8BD08C2EF3 /* RosaKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RosaKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		74F702D82E108F10D7758C40B6D7BC77 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		76785242A2B27E1E16CD023CF4999B9B /* RosaFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RosaFloatingPointExtensions.swift; sourceTree = "<group>"; };
 		7864435675BC992B38DC285247DA4DA6 /* Pods-SoundRecognizerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoundRecognizerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81F1FAB599E0397E97EBB1A81989A8EB /* RosaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RosaKit-prefix.pch"; sourceTree = "<group>"; };
-		914350BF29EF928AF2087F21E3BE36D2 /* pocketfft.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pocketfft.c; sourceTree = "<group>"; };
+		81FCA73BE8D40C58DB7892DD0DA3408C /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		899590E89BBB0B1FB6083D06EAF6BEB0 /* RosaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RosaKit.modulemap; sourceTree = "<group>"; };
+		9279577D9A5BCBDE3344A21DAD3EAA88 /* RosaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RosaKit-umbrella.h"; sourceTree = "<group>"; };
+		97C2514353ED21D1E113989BF3BC2E53 /* RosaKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RosaKit.debug.xcconfig; sourceTree = "<group>"; };
 		9CE001D899C345E724F0F96D49409C0E /* Pods-SoundRecognizerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoundRecognizerTests-Info.plist"; sourceTree = "<group>"; };
-		9D870B1D4CB3CFA125CDCFDF0B92B790 /* RosaKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RosaKit.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0AE2CB5087848C8956391706B0880FB /* RosaKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RosaKit-Info.plist"; sourceTree = "<group>"; };
-		B2AC776CBE15A06A867F74B1A81C1856 /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		A418CD0753B9DDD2F7F718F8F2F4EE7D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		B614F971FCB2735DCC740121DFD877B0 /* Pods-SoundRecognizerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SoundRecognizerTests-dummy.m"; sourceTree = "<group>"; };
+		B77C38404F7FA55BC064C198788647C1 /* pocketfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pocketfft.h; sourceTree = "<group>"; };
+		B99E2C5CA9C35C9EAB81144A5556A6BE /* RosaKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = RosaKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C7C003CF8A615B9FDD18E00961D492ED /* Pods-SoundRecognizerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SoundRecognizerTests.modulemap"; sourceTree = "<group>"; };
 		D059801C0D721E126ECBB8660372C7C5 /* Pods-SoundRecognizerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoundRecognizerTests-frameworks.sh"; sourceTree = "<group>"; };
 		D6544891F6F3820451B1AB544E31D8A1 /* Pods-SoundRecognizer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoundRecognizer-acknowledgements.plist"; sourceTree = "<group>"; };
 		D7E6100FC80A819FB238E61ACB476AAE /* Pods-SoundRecognizer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SoundRecognizer.modulemap"; sourceTree = "<group>"; };
 		DB94B4F9F80814B0F98C48B88AFE17F1 /* Pods_SoundRecognizer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SoundRecognizer.framework; path = "Pods-SoundRecognizer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE5EED3936FC1DAE2042EB16ADF7806F /* RosaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RosaKit-dummy.m"; sourceTree = "<group>"; };
-		E15A2406F768F338B433A83377DB0F2B /* ArrayLibRosaExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayLibRosaExtensions.swift; sourceTree = "<group>"; };
+		DF1EA57DBF8B17EB42EFBBEE977F2058 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		E670FB39D5B22B166D4A72862B88E525 /* Pods-SoundRecognizerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoundRecognizerTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E7EE020AFC2E357E875DE4EE7B5B5426 /* ArrayMatrixExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayMatrixExtensions.swift; sourceTree = "<group>"; };
-		EB0809A200C3BD8E1CC4B4847E5ED16D /* pocketfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pocketfft.h; sourceTree = "<group>"; };
-		EF096E47D9CE527816D53C8F8D8D0C99 /* RosaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RosaKit.release.xcconfig; sourceTree = "<group>"; };
+		EDF94A1FB6AACBC0137B2D2076ED0000 /* RosaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RosaKit-prefix.pch"; sourceTree = "<group>"; };
+		F6A3303E3C7027D08960CD0287F010E9 /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 		F83F68433C3A6B0CB3F81C58555DED57 /* Pods-SoundRecognizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoundRecognizer.release.xcconfig"; sourceTree = "<group>"; };
+		FC1419054DD532772A01B0B3CD004EC1 /* WavFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WavFileManager.swift; sourceTree = "<group>"; };
 		FD771F06E10E6FC49C7AFED3EF72AC45 /* Pods-SoundRecognizerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoundRecognizerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,16 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B6C5DBE6D71BA30AA992ACF69862058 /* NumKit */ = {
+		11DA29B4D63C2CE570A5052600594FFD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				24623FC5266B13FA6C85D77B9F79A610 /* ArrayExtensions.swift */,
-				E7EE020AFC2E357E875DE4EE7B5B5426 /* ArrayMatrixExtensions.swift */,
-				B2AC776CBE15A06A867F74B1A81C1856 /* DataExtensions.swift */,
-				4BA6EB7A039806EE45A85142DC0A3B11 /* FloatingPointExtensions.swift */,
+				11C3446E89B244366F0A7E8F34E9878F /* LICENSE */,
+				A418CD0753B9DDD2F7F718F8F2F4EE7D /* README.md */,
+				B99E2C5CA9C35C9EAB81144A5556A6BE /* RosaKit.podspec */,
 			);
-			name = NumKit;
-			path = Sources/NumKit;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		1B4F9E3E295AA1632D3E79E12D3D721A /* Products */ = {
@@ -140,11 +139,45 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1EC35E64C4E154693BA61BFFF8BC9C27 /* pocketfft */ = {
+		1C5B4B91E7BA9F1124896D639D4E7019 /* RosaKit */ = {
 			isa = PBXGroup;
 			children = (
-				914350BF29EF928AF2087F21E3BE36D2 /* pocketfft.c */,
-				EB0809A200C3BD8E1CC4B4847E5ED16D /* pocketfft.h */,
+				DF56FB61F1F625199A44E514B5FE251F /* CLibs */,
+				A10F5B09B146BEB86461A72FD38379AD /* NumKit */,
+				11DA29B4D63C2CE570A5052600594FFD /* Pod */,
+				414CD1B2756FC389AFC8D4912B5AB9BB /* Rosa */,
+				24B0BE1492CDFAD1420CEB2D61B27DF4 /* SciKit */,
+				8F460DF24FA9205404C5D4BDA0A70F70 /* Support Files */,
+			);
+			name = RosaKit;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		24B0BE1492CDFAD1420CEB2D61B27DF4 /* SciKit */ = {
+			isa = PBXGroup;
+			children = (
+				035D25553EE4BF6B10C56839F41DD3D4 /* ArrayDoubleExtensions.swift */,
+			);
+			name = SciKit;
+			path = Sources/SciKit;
+			sourceTree = "<group>";
+		};
+		414CD1B2756FC389AFC8D4912B5AB9BB /* Rosa */ = {
+			isa = PBXGroup;
+			children = (
+				04B9547A8E576DD857CC8721229BBDB4 /* ArrayLibRosaExtensions.swift */,
+				38BD1A9A4CA259C8E412F2E845CE9907 /* RosaFloatingPointExtensions.swift */,
+				FC1419054DD532772A01B0B3CD004EC1 /* WavFileManager.swift */,
+			);
+			name = Rosa;
+			path = Sources/Rosa;
+			sourceTree = "<group>";
+		};
+		4A4BF176E99C53D32B9E78ED34312AC0 /* pocketfft */ = {
+			isa = PBXGroup;
+			children = (
+				3879E1EA5C0EE7A3D3D8581055CC9A4B /* pocketfft.c */,
+				B77C38404F7FA55BC064C198788647C1 /* pocketfft.h */,
 			);
 			name = pocketfft;
 			path = pocketfft;
@@ -167,62 +200,31 @@
 			path = "Target Support Files/Pods-SoundRecognizerTests";
 			sourceTree = "<group>";
 		};
-		887922B09087B7CFFF23ECE2481AEF95 /* Support Files */ = {
+		8F460DF24FA9205404C5D4BDA0A70F70 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				04B6B9F68ABF156D809FB89E293186D7 /* RosaKit.modulemap */,
-				DE5EED3936FC1DAE2042EB16ADF7806F /* RosaKit-dummy.m */,
-				A0AE2CB5087848C8956391706B0880FB /* RosaKit-Info.plist */,
-				81F1FAB599E0397E97EBB1A81989A8EB /* RosaKit-prefix.pch */,
-				5FDA1CBA7D5BE4CE19C8BE34B74F8835 /* RosaKit-umbrella.h */,
-				9D870B1D4CB3CFA125CDCFDF0B92B790 /* RosaKit.debug.xcconfig */,
-				EF096E47D9CE527816D53C8F8D8D0C99 /* RosaKit.release.xcconfig */,
+				899590E89BBB0B1FB6083D06EAF6BEB0 /* RosaKit.modulemap */,
+				5765358146E26A0F725127FDA9837BD0 /* RosaKit-dummy.m */,
+				405F0DA22793C7F8CEE6B27DED215B0D /* RosaKit-Info.plist */,
+				EDF94A1FB6AACBC0137B2D2076ED0000 /* RosaKit-prefix.pch */,
+				9279577D9A5BCBDE3344A21DAD3EAA88 /* RosaKit-umbrella.h */,
+				97C2514353ED21D1E113989BF3BC2E53 /* RosaKit.debug.xcconfig */,
+				67E64B2C34503ACBF42FBD0A55546490 /* RosaKit.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "Example/Soundrecognizer/Pods/Target Support Files/RosaKit";
+			path = "Example/SoundRecognizer/Pods/Target Support Files/RosaKit";
 			sourceTree = "<group>";
 		};
-		8EDADAF119BCC08B7877DF581D3F1440 /* SciKit */ = {
+		A10F5B09B146BEB86461A72FD38379AD /* NumKit */ = {
 			isa = PBXGroup;
 			children = (
-				1E94018032C38B75E6ADACC10CDA6E96 /* ArrayDoubleExtensions.swift */,
+				DF1EA57DBF8B17EB42EFBBEE977F2058 /* ArrayExtensions.swift */,
+				6ADD68057E1864EB1D132604E6EC7B8B /* ArrayMatrixExtensions.swift */,
+				F6A3303E3C7027D08960CD0287F010E9 /* DataExtensions.swift */,
+				81FCA73BE8D40C58DB7892DD0DA3408C /* FloatingPointExtensions.swift */,
 			);
-			name = SciKit;
-			path = Sources/SciKit;
-			sourceTree = "<group>";
-		};
-		9471B528D8C390DDB7CE4AE84DE4989D /* RosaKit */ = {
-			isa = PBXGroup;
-			children = (
-				C6CD5E42D407C48D59B41D24EE4E89FE /* CLibs */,
-				0B6C5DBE6D71BA30AA992ACF69862058 /* NumKit */,
-				958672CD0D715A8EE2E3A6C3A0891369 /* Pod */,
-				ACF9B4F9954A318149EA16933115438F /* Rosa */,
-				8EDADAF119BCC08B7877DF581D3F1440 /* SciKit */,
-				887922B09087B7CFFF23ECE2481AEF95 /* Support Files */,
-			);
-			name = RosaKit;
-			path = ../../..;
-			sourceTree = "<group>";
-		};
-		958672CD0D715A8EE2E3A6C3A0891369 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				74F702D82E108F10D7758C40B6D7BC77 /* README.md */,
-				72ABEC2C14C9A7B54D857C8BD08C2EF3 /* RosaKit.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		ACF9B4F9954A318149EA16933115438F /* Rosa */ = {
-			isa = PBXGroup;
-			children = (
-				E15A2406F768F338B433A83377DB0F2B /* ArrayLibRosaExtensions.swift */,
-				76785242A2B27E1E16CD023CF4999B9B /* RosaFloatingPointExtensions.swift */,
-				0797F9235F371F30BD9F92A9CFC468D2 /* WavFileManager.swift */,
-			);
-			name = Rosa;
-			path = Sources/Rosa;
+			name = NumKit;
+			path = Sources/NumKit;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -231,15 +233,6 @@
 				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		C6CD5E42D407C48D59B41D24EE4E89FE /* CLibs */ = {
-			isa = PBXGroup;
-			children = (
-				1EC35E64C4E154693BA61BFFF8BC9C27 /* pocketfft */,
-			);
-			name = CLibs;
-			path = Sources/CLibs;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -290,9 +283,18 @@
 		DAF625F4E49007028A179956A460EEE1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9471B528D8C390DDB7CE4AE84DE4989D /* RosaKit */,
+				1C5B4B91E7BA9F1124896D639D4E7019 /* RosaKit */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DF56FB61F1F625199A44E514B5FE251F /* CLibs */ = {
+			isa = PBXGroup;
+			children = (
+				4A4BF176E99C53D32B9E78ED34312AC0 /* pocketfft */,
+			);
+			name = CLibs;
+			path = Sources/CLibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,7 +551,7 @@
 		};
 		31E526949575F18DE97B5A9C6C07D069 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF096E47D9CE527816D53C8F8D8D0C99 /* RosaKit.release.xcconfig */;
+			baseConfigurationReference = 67E64B2C34503ACBF42FBD0A55546490 /* RosaKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -739,7 +741,7 @@
 		};
 		CF33811419BC1729079C521EE20EC019 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D870B1D4CB3CFA125CDCFDF0B92B790 /* RosaKit.debug.xcconfig */;
+			baseConfigurationReference = 97C2514353ED21D1E113989BF3BC2E53 /* RosaKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -21,20 +21,20 @@ class SoundRecognizerTests: XCTestCase {
     }
 
     func testRecognizer() throws {
-        let url = Bundle(for: Self.self).url(forResource: "1-137-A-32", withExtension: "wav")
+        let url = Bundle(for: Self.self).url(forResource: "1-48298-A-46", withExtension: "wav")
 
         let soundFile = url.flatMap { try? WavFileManager().readWavFile(at: $0) }
 
         let int16Array = soundFile?.data.int16Array.map { Double($0)/32768.0 }
         
         let xshape = int16Array?.count ?? 0
-        let size = 2048*30
-        let offset = size/16
+        let size = 2048*20
+        let offset = size/8
         let count = xshape/offset - 30/2
         
-        let validCategory = 32
+        let validCategory = 46
         
-        let soundRecognizerEngine = SoundRecognizerEngine(sampleRate: 44100)
+        let soundRecognizerEngine = SoundRecognizerEngine(sampleRate: 44100, windowLength: size)
         
         var isCorrect = true
         
