@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RosaKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "RosaKit it's lightweight port to iOS libRosa"
   s.description  = "RosaKit it's lightweight port to iOS libRosa which written on Python, it's used for sound analyze"
 
