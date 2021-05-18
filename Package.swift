@@ -8,8 +8,6 @@ let package = Package(name: "RosaKit",
                                           targets: ["RosaKit"])],
                       dependencies: [
                         .package(url: "https://github.com/dhrebeniuk/plain-pocketfft.git", from: "0.0.1")
-                      ], targets: [.target(name: "RosaKit", dependencies: [
-                        .package(url: "https://github.com/dhrebeniuk/plain-pocketfft.git", from: "0.0.1")
-                      ],
+                      ], targets: [.target(name: "RosaKit", dependencies: ["PlainPocketFFT"]
                                            path: ".")]]
                       swiftLanguageVersions: [.v5])
