@@ -107,8 +107,8 @@ extension Array where Element == [Double] {
         let cols = transposed.count
         let rows = transposed.first?.count ?? 1
         let rfftRows = rows/2 + 1
-        let flatMatrix = transposed.flatMap { $0 }
         
+        var flatMatrix = transposed.flatMap { $0 }
         let rfftCount = rfftRows*cols
         var resultComplexMatrix = [Double](repeating: 0.0, count: (rfftCount + cols + 1)*2)
                         
@@ -116,7 +116,7 @@ extension Array where Element == [Double] {
             let destinationDoubleData = destinationData.bindMemory(to: Double.self).baseAddress
             flatMatrix.withUnsafeMutableBytes { (flatData) -> Void in
                 let sourceDoubleData = flatData.bindMemory(to: Double.self).baseAddress
-                PlainPocketFFTRunner.execute_real_forward(sourceDoubleData, destinationDoubleData, Int32(cols), Int32(rows), 1)
+                PlainPocketFFTRunner.execute_real_forward(sourceDoubleData, result: destinationDoubleData, cols: Int32(cols), rows: Int32(rows), fct: 1)
             }
         }
 
