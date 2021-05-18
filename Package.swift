@@ -6,7 +6,10 @@ let package = Package(name: "RosaKit",
                       platforms: [.iOS(.v8)],
                       products: [.library(name: "RosaKit",
                                           targets: ["RosaKit"])],
-                      targets: [.target(name: "RosaKit",
-                                        path: ".")],
+                      dependencies: [
+                        .package(url: "https://github.com/dhrebeniuk/plain-pocketfft.git", from: "0.0.1")
+                      ], targets: [.target(name: "RosaKit",
+                                           path: ".")], targets: [.target(name: "RosaKit",
+                                                                path: ".")]
                       swiftLanguageVersions: [.v5])
                       
