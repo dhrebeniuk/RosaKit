@@ -50,4 +50,4 @@ Please look in Examples
 ## Used in Applications:
 
 ## Decibel Meter: 
-https://apps.apple.com/ua/app/decibel-meter/id1361845683?mt=12
+https://apps.apple.com/app/decibel-meter/id1361845683?mt=12
