@@ -20,7 +20,7 @@ pod 'RosaKit'
 * Preprocessing steps for most Machine Learning models in Sound Recognition Sphere
 
 
-# Orignial Project:
+# Original Project:
 
 https://librosa.github.io
 
