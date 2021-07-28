@@ -44,7 +44,7 @@ public class SoundRecognizerEngine {
             let collectionToPredict = samplesCollection
             samplesCollection = [Double]()
             
-            let spectrogram = collectionToPredict.stft(nFFT: 1024, hopLength: 512).map { $0.map { pow($0, 2.0) } }
+            let spectrogram = collectionToPredict.stft(nFFT: 1024, hopLength: 512).map { $0.map { pow($0.real, 2.0) + pow($0.imagine, 2.0) } }
             let melSpectrogram = self.melBasis.dot(matrix: spectrogram)
             
             let powerSpectrogram = melSpectrogram.normalizeAudioPowerArray()
@@ -58,7 +58,7 @@ public class SoundRecognizerEngine {
             }
             
             do {
-                let input  = SoundRecognitionInput(input1: mlArray!, lstm_1_h_in: self.lstm_1_h_out, lstm_1_c_in: self.lstm_1_c_out, lstm_2_h_in: self.lstm_2_h_out, lstm_2_c_in: self.lstm_2_c_out)
+                let input  = SoundRecognitionInput(input1: mlArray!)
                 let options = MLPredictionOptions()
                 options.usesCPUOnly = true
                 let result = try model.prediction(input: input, options: options)

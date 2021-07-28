@@ -76,7 +76,7 @@ public extension Array where Iterator.Element: FloatingPoint {
 
 public extension Array where Element == Double {
     
-    func stft(nFFT: Int = 256, hopLength: Int = 1024) -> [[Double]] {
+    func stft(nFFT: Int = 256, hopLength: Int = 1024) -> [[(real: Double, imagine: Double)]] {
         let FFTWindow = [Double].getHannWindow(frameLength: Double(nFFT)).map { [$0] }
 
         let centered = self.reflectPad(fftSize: nFFT/2)
@@ -93,7 +93,7 @@ public extension Array where Element == Double {
     }
     
     func melspectrogram(nFFT: Int = 2048, hopLength: Int = 512, sampleRate: Int = 22050, melsCount: Int = 128) -> [[Double]] {
-        let spectrogram = self.stft(nFFT: nFFT, hopLength: hopLength).map { $0.map { pow($0, 2.0) } }
+        let spectrogram = self.stft(nFFT: nFFT, hopLength: hopLength).map { $0.map { pow($0.real, 2.0) + pow($0.imagine, 2.0) } }
         let melBasis = [Double].createMelFilter(sampleRate: sampleRate, FTTCount: nFFT, melsCount: melsCount)
         return melBasis.dot(matrix: spectrogram)
     }
@@ -102,7 +102,7 @@ public extension Array where Element == Double {
 
 extension Array where Element == [Double] {
     
-    var rfft: [[Double]] {
+    var rfft: [[(real: Double, imagine: Double)]] {
         let transposed = self.transposed
         let cols = transposed.count
         let rows = transposed.first?.count ?? 1
@@ -121,15 +121,30 @@ extension Array where Element == [Double] {
         }
 
         var realMatrix = [Double](repeating: 0.0, count: rfftCount)
+        var imagineMatrix = [Double](repeating: 0.0, count: rfftCount)
 
         for index in 0..<rfftCount {
             let real = resultComplexMatrix[index*2]
             let imagine = resultComplexMatrix[index*2+1]
-            realMatrix[index] = sqrt(pow(real, 2) + pow(imagine, 2))
+            realMatrix[index] = real
+            imagineMatrix[index] = imagine
         }
         
-        let result = realMatrix.chunked(into: rfftRows).transposed
+        let resultRealMatrix = realMatrix.chunked(into: rfftRows).transposed
+        let resultImagineMatrix = realMatrix.chunked(into: rfftRows).transposed
+
+        var result = [[(real: Double, imagine: Double)]]()
+        for row in 0..<resultRealMatrix.count {
+            let realMatrixRow = resultRealMatrix[row]
+            let imagineMatrixRow = resultImagineMatrix[row]
             
+            var resultRow = [(real: Double, imagine: Double)]()
+            for col in 0..<realMatrixRow.count {
+                resultRow.append((real: realMatrixRow[col], imagine: imagineMatrixRow[col]))
+            }
+            result.append(resultRow)
+        }
+        
         return result
     }
     
