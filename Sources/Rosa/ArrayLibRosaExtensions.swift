@@ -131,7 +131,7 @@ extension Array where Element == [Double] {
         }
         
         let resultRealMatrix = realMatrix.chunked(into: rfftRows).transposed
-        let resultImagineMatrix = realMatrix.chunked(into: rfftRows).transposed
+        let resultImagineMatrix = imagineMatrix.chunked(into: rfftRows).transposed
 
         var result = [[(real: Double, imagine: Double)]]()
         for row in 0..<resultRealMatrix.count {
