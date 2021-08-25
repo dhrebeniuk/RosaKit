@@ -127,3 +127,26 @@ extension Array where Element == [Double] {
         return result.chunked(into: Int(matrixCols))
     }
 }
+
+
+extension Array where Element == [(real: Double, imagine: Double)] {
+    
+    public var transposed: [Element] {
+        let matrix = self
+        let newMatrixCols = matrix.count
+        let newMatrixRows = matrix.first?.count ?? 1
+        
+        var resultsCols = [[(real: Double, imagine: Double)]].init(repeating: [(real: Double, imagine: Double)](), count: newMatrixRows)
+        
+        for col in 0..<newMatrixRows {
+            var resultsRows = [(real: Double, imagine: Double)].init(repeating: (real: 0.0, imagine: 0.0), count: newMatrixCols)
+            for row in 0..<newMatrixCols {
+                resultsRows[row] = matrix[row][col]
+            }
+            resultsCols[col] = resultsRows
+        }
+        
+        return resultsCols
+    }
+    
+}

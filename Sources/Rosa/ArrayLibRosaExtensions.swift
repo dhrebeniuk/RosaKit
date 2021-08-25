@@ -91,11 +91,60 @@ public extension Array where Element == Double {
         
         return result
     }
-    
+        
     func melspectrogram(nFFT: Int = 2048, hopLength: Int = 512, sampleRate: Int = 22050, melsCount: Int = 128) -> [[Double]] {
         let spectrogram = self.stft(nFFT: nFFT, hopLength: hopLength).map { $0.map { pow($0.real, 2.0) + pow($0.imagine, 2.0) } }
         let melBasis = [Double].createMelFilter(sampleRate: sampleRate, FTTCount: nFFT, melsCount: melsCount)
         return melBasis.dot(matrix: spectrogram)
+    }
+    
+}
+
+public extension Array where Element == [(real: Double, imagine: Double)] {
+    
+    func istft() -> [Double] {
+        let nFFT = 2 * (self.count - 1)
+        let winLength = nFFT
+        let hopLength = winLength / 4
+
+        let iFFTWindow = [Double].getHannWindow(frameLength: Double(nFFT)).map { [$0] }
+        
+        let nFramesCount = self[0].count
+
+        let expectedSignalLen = nFFT + hopLength * (nFramesCount - 1)
+        
+        let nCollumns = (4096 * MemoryLayout<Double>.size) / self.count
+  
+        var y = Array.init(repeating: [(real: 0.0, imagine: 0.0)], count: expectedSignalLen)
+        
+        for index in 0...(nFramesCount / nCollumns) {
+            let blS = index * nCollumns
+            let blT = Swift.min(blS + nCollumns, nFramesCount)
+            
+            let size = blT - blS
+            var resultArray = [Double].init(repeating: 0.0, count: size*self.count)
+            
+            let norm = nFFT
+            let fct = 1.0 / Double(nFFT)
+                 
+            let trimmedMatrix = self.map { $0[blS..<blT] }
+            
+            var stftChunk = trimmedMatrix.map { $0.flatMap { [$0.real, $0.imagine] } } .flatMap { $0.flatMap { $0 } }
+            
+            stftChunk.withUnsafeMutableBytes { stftChunkData -> Void in
+                let stftChunkDataDoubleData = stftChunkData.bindMemory(to: Double.self).baseAddress
+                resultArray.withUnsafeMutableBytes { (resultArrayFlatData) -> Void in
+                    let destinationDoubleData = resultArrayFlatData.bindMemory(to: Double.self).baseAddress
+                    PlainPocketFFTRunner.execute_real_backward(stftChunkDataDoubleData, result: destinationDoubleData, cols: Int32(trimmedMatrix.count), rows: Int32(trimmedMatrix[0].count), fct: fct)
+                }
+            }
+            
+            
+            let backSTFT = resultArray.chunked(into: nCollumns)
+            // TODO:
+        }
+            
+        return [Double]()
     }
     
 }
