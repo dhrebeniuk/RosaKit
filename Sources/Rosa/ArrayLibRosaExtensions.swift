@@ -115,7 +115,7 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
         
         let nCollumns = (4096 * MemoryLayout<Double>.size) / self.count
   
-        var y = Array.init(repeating: [(real: 0.0, imagine: 0.0)], count: expectedSignalLen)
+        var y = Array(repeating: [(real: 0.0, imagine: 0.0)], count: expectedSignalLen)
         
         for index in 0...(nFramesCount / nCollumns) {
             let blS = index * nCollumns
@@ -127,26 +127,51 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
             let norm = nFFT
             let fct = 1.0 / Double(nFFT)
                  
-            let trimmedMatrix = self.map { $0[blS..<blT] }
+            let trimmedMatrix = self.map { Array<(real: Double, imagine: Double)>($0[blS..<blT]) }
             
-            var stftChunk = trimmedMatrix.map { $0.flatMap { [$0.real, $0.imagine] } } .flatMap { $0.flatMap { $0 } }
+            var irfftMatrix = trimmedMatrix.irfft
             
-            stftChunk.withUnsafeMutableBytes { stftChunkData -> Void in
-                let stftChunkDataDoubleData = stftChunkData.bindMemory(to: Double.self).baseAddress
-                resultArray.withUnsafeMutableBytes { (resultArrayFlatData) -> Void in
-                    let destinationDoubleData = resultArrayFlatData.bindMemory(to: Double.self).baseAddress
-                    PlainPocketFFTRunner.execute_real_backward(stftChunkDataDoubleData, result: destinationDoubleData, cols: Int32(trimmedMatrix.count), rows: Int32(trimmedMatrix[0].count), fct: fct)
-                }
-            }
-            
-            
-            let backSTFT = resultArray.chunked(into: nCollumns)
-            // TODO:
+            // TODO: need finish istft
         }
             
         return [Double]()
     }
     
+    var irfft: [[Double]] {
+        let invNorm = (self.count - 1) * 2
+        let cols = self.count
+        let rows = self.first?.count ?? 0
+        
+        var slicedMatrix = Array<Array<(real: Double, imagine: Double)>>(repeating: Array<(real: Double, imagine: Double)>(repeating: (real: 0.0, imagine: 0.0), count: rows), count: invNorm);
+        
+        for colIndex in 0..<cols {
+            for rowIndex in 0..<rows {
+                slicedMatrix[colIndex][rowIndex] = self[colIndex][rowIndex]
+            }
+        }
+        
+        slicedMatrix = slicedMatrix.transposed
+        
+        let fct = 1.0 / Double(invNorm)
+
+        var stftChunk = slicedMatrix.map { $0.flatMap { [$0.real, $0.imagine] } } .flatMap { $0.flatMap { $0 } }
+
+        var resultArray = [Double].init(repeating: 0.0, count: invNorm*rows)
+        stftChunk.withUnsafeMutableBytes { stftChunkData -> Void in
+            let stftChunkDataDoubleData = stftChunkData.bindMemory(to: Double.self).baseAddress
+            resultArray.withUnsafeMutableBytes { (resultArrayFlatData) -> Void in
+                let destinationDoubleData = resultArrayFlatData.bindMemory(to: Double.self).baseAddress
+                PlainPocketFFTRunner.execute_real_backward(stftChunkDataDoubleData, result: destinationDoubleData, cols: Int32(slicedMatrix.count), rows: Int32(slicedMatrix.first?.count ?? 0), fct: fct)
+            }
+        }
+        
+        let backSTFT = resultArray.chunked(into: invNorm)
+        
+        let backSTFTTransposed = backSTFT.transposed
+
+        
+        return backSTFTTransposed
+    }
 }
 
 extension Array where Element == [Double] {
