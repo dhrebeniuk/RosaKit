@@ -24,6 +24,16 @@ extension Array where Iterator.Element: FloatingPoint {
         return result
     }
     
+    static func zeros(length: Int) -> [Element] {
+        var result: [Element] = [Element]()
+        
+        for _ in 0..<length {
+            result.append(Element.zero)
+        }
+        
+        return result
+    }
+    
     func reflectPad(fftSize: Int) -> [Element] {
         var array = self
       
@@ -66,4 +76,29 @@ extension Array where Iterator.Element: FloatingPoint {
 
         return linespacePI.map { ((one + ($0.cosine() as Element))/Element(2)) }.reversed().dropLast()
     }
+
+}
+
+extension Array where Iterator.Element == Double {
+    
+    static func windowHannSumsquare(nFrames: Int, winLength: Int, nFFt: Int, hopLength: Int) -> [Double] {
+        let nCount = nFFt + hopLength * (nFrames - 1)
+        
+        var x = Self.zeros(length: nCount)
+        
+        var winSQ = getHannWindow(frameLength: Element(winLength)).map { Double($0)*Double(($0)) }
+                
+        for index in 0..<nFrames {
+            let sample = index * hopLength
+            
+            let xDiff = winSQ[0..<Swift.max(0, Swift.min(winSQ.count, x.count - sample))]
+            
+            for index in 0..<Swift.min(nCount, xDiff.count) {
+                x[sample + index] += xDiff[index]
+            }
+        }
+        
+        return x
+    }
+    
 }
