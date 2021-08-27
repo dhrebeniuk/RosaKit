@@ -115,14 +115,16 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
         
         let nCollumns = (4096 * MemoryLayout<Double>.size) / self.count
   
-        var y = Array(repeating: [(real: 0.0, imagine: 0.0)], count: expectedSignalLen)
+        var y = Array<Double>(repeating: 0.0, count: expectedSignalLen)
+        
+        var frame = 0
         
         for index in 0...(nFramesCount / nCollumns) {
             let blS = index * nCollumns
             let blT = Swift.min(blS + nCollumns, nFramesCount)
             
             let size = blT - blS
-            var resultArray = [Double].init(repeating: 0.0, count: size*self.count)
+            var resultArray = Array<Double>(repeating: 0.0, count: size*self.count)
             
             let norm = nFFT
             let fct = 1.0 / Double(nFFT)
@@ -131,12 +133,27 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
             
             var irfftMatrix = trimmedMatrix.irfft
             
-            // TODO: need finish istft
-        }
+            let ytmp = iFFTWindow.multiplyVector(matrix: irfftMatrix)
             
-        return [Double]()
+            let ytmpIndex = frame*hopLength;
+            
+            let ytmpCollumns = ytmp.first?.count ?? 0
+            for frameIndex in 0..<ytmpCollumns {
+                let sample = frameIndex * hopLength
+                let yDiff = ytmp.flatMap { $0[frameIndex] }
+                for index in 0..<yDiff.count {
+                    y[ytmpIndex + sample + index] += yDiff[index]
+                }
+            }
+            
+            frame += blT - blS
+        }
+
+         // TODO: filters.window_sumsquare
+        
+        return y
     }
-    
+  
     var irfft: [[Double]] {
         let invNorm = (self.count - 1) * 2
         let cols = self.count
