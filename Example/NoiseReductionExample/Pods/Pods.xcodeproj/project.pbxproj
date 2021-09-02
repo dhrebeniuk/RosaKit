@@ -1,0 +1,906 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FC22AC2C1C17E08570A7935BEB692DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAA4EC756B6ED494CB8C27EA976178E /* Cocoa.framework */; };
+		2C39B6E3733D6AE8D44B3C418C21D241 /* PlainPocketFFTRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2B9E833AC1D1D990D2DD7354DCD07E /* PlainPocketFFTRunner.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		31CFB09D0AFDDFD55C82F8B28311F61D /* RosaFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F06CE754351409D3EDD4B80F878D6 /* RosaFloatingPointExtensions.swift */; };
+		39D3B75EC234C0E3446F5199283DF7ED /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB7D61619D9D91B46587768B860ADD3 /* FloatingPointExtensions.swift */; };
+		4173E1B4044468FD9F31224FA52A6903 /* PlainPocketFFT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71A919DC9B0F5E19F4565AFF2A4B6ECD /* PlainPocketFFT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46CF1612D60DDA9A2EEBBBE4FC66EE79 /* RosaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D7108C9393E27864816DAFED840510 /* RosaKit-dummy.m */; };
+		537CB37EEABA53817DA58D845E42222D /* ArrayDoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0DD0E7101B26C8B8E424A4EBAD32D /* ArrayDoubleExtensions.swift */; };
+		5F6D5B75BE65A3EE5179CC794586A7F2 /* Pods-NoiseReductionExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3990638684D1AA2937AFC686662752BC /* Pods-NoiseReductionExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C12C91AA375C109A1E65129A8AB509F /* pocketfft.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AA4D17043C7A65A523A9C794745944 /* pocketfft.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7109E7DF6B0134CA2C8B5F8822277EB2 /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2825ED61633CD001A657DAE2AD9815E /* WavFileManager.swift */; };
+		74396BF2297C8ACC005E8FAC907E36B4 /* Pods-NoiseReductionExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0575F2F30DEB534CB131263B9303893 /* Pods-NoiseReductionExample-dummy.m */; };
+		901947D3232FEFF97EF3B81BAA0BAABB /* PlainPocketFFT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA97A9763FB2090FF810BC1D7B9B7C /* PlainPocketFFT-dummy.m */; };
+		952FACD49E3EE5F2D7B01B31AC7220D9 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7707AAC7C9E3C22708BA3114D6F3C9E /* DataExtensions.swift */; };
+		A7813589B6369D466097017CF1AE0535 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAA4EC756B6ED494CB8C27EA976178E /* Cocoa.framework */; };
+		A9EF737CBB02372E4536B73CC45CC3CF /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C9DB95B6201526247FA3DE85CE5910 /* ArrayLibRosaExtensions.swift */; };
+		BC83D18D6DA25480A217BDFB4083753F /* PlainPocketFFT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D46CF8414AAA5345BD3D8BC7EE7BB04 /* PlainPocketFFT.framework */; };
+		D5E59F256B0631EEBF3BD6467ED10970 /* RosaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C18AC808E4D145A23B01F3B003786AC8 /* RosaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8B8CFCD3C86846CBCDE74DC1588BFE3 /* ArrayMatrixExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C44693911FAF1D8756222A24AED2C /* ArrayMatrixExtensions.swift */; };
+		E40DD720E17B20B5F40D91FB3D73A10B /* PlainPocketFFTRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = 71DDD0E566678A8A09CBE226FE7A9610 /* PlainPocketFFTRunner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E45C3D5506DE31FA9C57396A51A29C36 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C1F13D11F24A7694321364B3749F22 /* ArrayExtensions.swift */; };
+		E70CDB425F1EDA55356EC9F0CC4581EE /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = 3055F7980C1EA68CC7531170A97E9A6F /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED8C96D898C7B6D4782F5D4AAFB1D796 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABAA4EC756B6ED494CB8C27EA976178E /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33F00FDA66D769DF16991F4792C1FC10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BE01596A7C4CE2FE91E17F78BD5BFEE;
+			remoteInfo = PlainPocketFFT;
+		};
+		A6E2E6FB55FF5FCB7099382679EAC811 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BE01596A7C4CE2FE91E17F78BD5BFEE;
+			remoteInfo = PlainPocketFFT;
+		};
+		DB8408AAA9A1FA109072A43E8516D445 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE42B31137B9E6797B625651842DB96B;
+			remoteInfo = RosaKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B14100FAC5E5FEB88287457B496747B /* PlainPocketFFT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PlainPocketFFT-Info.plist"; sourceTree = "<group>"; };
+		1B33481D65CDACA5929FA28D5CB8682E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3055F7980C1EA68CC7531170A97E9A6F /* pocketfft.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pocketfft.h; path = Sources/ObjC/include/pocketfft.h; sourceTree = "<group>"; };
+		3280D516FCBC4508A8F4986BE56B0BBA /* PlainPocketFFT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlainPocketFFT.release.xcconfig; sourceTree = "<group>"; };
+		3367476107DDD00BC0904235A21F3941 /* RosaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3990638684D1AA2937AFC686662752BC /* Pods-NoiseReductionExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NoiseReductionExample-umbrella.h"; sourceTree = "<group>"; };
+		3BAA97A9763FB2090FF810BC1D7B9B7C /* PlainPocketFFT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlainPocketFFT-dummy.m"; sourceTree = "<group>"; };
+		53C1F13D11F24A7694321364B3749F22 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		5B2B9B65C94B158CDE53793C8AAFEB11 /* RosaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RosaKit.release.xcconfig; sourceTree = "<group>"; };
+		68B4B71BDD8DD4FD084C8218E094845B /* Pods-NoiseReductionExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoiseReductionExample-Info.plist"; sourceTree = "<group>"; };
+		68EEFAE17F2FFEBF61EAF8618E0D4A6A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		6C07551E0F2F4EE81EDC30DE06BFFCF0 /* Pods-NoiseReductionExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NoiseReductionExample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6D4B008EA3FAB2B479A90B3C5BD4980F /* Pods_NoiseReductionExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoiseReductionExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71A919DC9B0F5E19F4565AFF2A4B6ECD /* PlainPocketFFT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlainPocketFFT-umbrella.h"; sourceTree = "<group>"; };
+		71DDD0E566678A8A09CBE226FE7A9610 /* PlainPocketFFTRunner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PlainPocketFFTRunner.h; path = Sources/ObjC/include/PlainPocketFFTRunner.h; sourceTree = "<group>"; };
+		8A8924CCF00F0BCD3D0A4976ECD7BCFA /* Pods-NoiseReductionExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NoiseReductionExample-frameworks.sh"; sourceTree = "<group>"; };
+		8D46CF8414AAA5345BD3D8BC7EE7BB04 /* PlainPocketFFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlainPocketFFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FED53BF9A405C1DF4D527BAB8CF0AEB /* RosaKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RosaKit.debug.xcconfig; sourceTree = "<group>"; };
+		95D10B51283D1FBCF6D91669A7671121 /* Pods-NoiseReductionExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NoiseReductionExample.modulemap"; sourceTree = "<group>"; };
+		98F9D970DE8350295CC1471E6B72AE40 /* PlainPocketFFT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlainPocketFFT.debug.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2825ED61633CD001A657DAE2AD9815E /* WavFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WavFileManager.swift; sourceTree = "<group>"; };
+		A5AB2CD696E1B6E1190075BD5100A778 /* RosaKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = RosaKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5FCA2B97E4A2E9A02CE4601381854BE /* PlainPocketFFT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PlainPocketFFT.modulemap; sourceTree = "<group>"; };
+		ABAA4EC756B6ED494CB8C27EA976178E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		AE2B9E833AC1D1D990D2DD7354DCD07E /* PlainPocketFFTRunner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PlainPocketFFTRunner.m; path = Sources/ObjC/PlainPocketFFTRunner.m; sourceTree = "<group>"; };
+		B2A9418F77E0B17D2CBE69A1AE3E024C /* Pods-NoiseReductionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoiseReductionExample.release.xcconfig"; sourceTree = "<group>"; };
+		C18AC808E4D145A23B01F3B003786AC8 /* RosaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RosaKit-umbrella.h"; sourceTree = "<group>"; };
+		C3C50F74C45CE95CCAADD6DFD8458251 /* RosaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RosaKit-prefix.pch"; sourceTree = "<group>"; };
+		C9A40D770C1C3A275E3766C1595CAB7E /* Pods-NoiseReductionExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NoiseReductionExample.debug.xcconfig"; sourceTree = "<group>"; };
+		CDF22FF86FDC3E97405A5F0529D1EDE9 /* RosaKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RosaKit-Info.plist"; sourceTree = "<group>"; };
+		D18F06CE754351409D3EDD4B80F878D6 /* RosaFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RosaFloatingPointExtensions.swift; sourceTree = "<group>"; };
+		D1F0DD0E7101B26C8B8E424A4EBAD32D /* ArrayDoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayDoubleExtensions.swift; sourceTree = "<group>"; };
+		D4D7108C9393E27864816DAFED840510 /* RosaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RosaKit-dummy.m"; sourceTree = "<group>"; };
+		D7707AAC7C9E3C22708BA3114D6F3C9E /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		D86E4FAB24271684A33305B770052D39 /* PlainPocketFFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlainPocketFFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9AA4D17043C7A65A523A9C794745944 /* pocketfft.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = pocketfft.m; path = Sources/ObjC/pocketfft.m; sourceTree = "<group>"; };
+		DFB7D61619D9D91B46587768B860ADD3 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		E0C9DB95B6201526247FA3DE85CE5910 /* ArrayLibRosaExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayLibRosaExtensions.swift; sourceTree = "<group>"; };
+		E418E00F71F78744999F3213443D7B3D /* PlainPocketFFT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlainPocketFFT-prefix.pch"; sourceTree = "<group>"; };
+		E79C44693911FAF1D8756222A24AED2C /* ArrayMatrixExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayMatrixExtensions.swift; sourceTree = "<group>"; };
+		F0575F2F30DEB534CB131263B9303893 /* Pods-NoiseReductionExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NoiseReductionExample-dummy.m"; sourceTree = "<group>"; };
+		F5BC01F7476E16B8859FF5F48BCC1BE3 /* RosaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RosaKit.modulemap; sourceTree = "<group>"; };
+		FBD2428F2847E48E53BEC7FAE762223E /* Pods-NoiseReductionExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NoiseReductionExample-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25967F3513B15A0A557C005388AF8E78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7813589B6369D466097017CF1AE0535 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E789F3D5526D26091D74DA566689247F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FC22AC2C1C17E08570A7935BEB692DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBEC55DB315849451C2F819AD055E757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED8C96D898C7B6D4782F5D4AAFB1D796 /* Cocoa.framework in Frameworks */,
+				BC83D18D6DA25480A217BDFB4083753F /* PlainPocketFFT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E2535EB71BBB41600FFE0778BF06E8 /* PlainPocketFFT */ = {
+			isa = PBXGroup;
+			children = (
+				71DDD0E566678A8A09CBE226FE7A9610 /* PlainPocketFFTRunner.h */,
+				AE2B9E833AC1D1D990D2DD7354DCD07E /* PlainPocketFFTRunner.m */,
+				3055F7980C1EA68CC7531170A97E9A6F /* pocketfft.h */,
+				D9AA4D17043C7A65A523A9C794745944 /* pocketfft.m */,
+				0513D2E1BD36D7B21C3D96D1690D5553 /* Support Files */,
+			);
+			path = PlainPocketFFT;
+			sourceTree = "<group>";
+		};
+		0513D2E1BD36D7B21C3D96D1690D5553 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5FCA2B97E4A2E9A02CE4601381854BE /* PlainPocketFFT.modulemap */,
+				3BAA97A9763FB2090FF810BC1D7B9B7C /* PlainPocketFFT-dummy.m */,
+				1B14100FAC5E5FEB88287457B496747B /* PlainPocketFFT-Info.plist */,
+				E418E00F71F78744999F3213443D7B3D /* PlainPocketFFT-prefix.pch */,
+				71A919DC9B0F5E19F4565AFF2A4B6ECD /* PlainPocketFFT-umbrella.h */,
+				98F9D970DE8350295CC1471E6B72AE40 /* PlainPocketFFT.debug.xcconfig */,
+				3280D516FCBC4508A8F4986BE56B0BBA /* PlainPocketFFT.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PlainPocketFFT";
+			sourceTree = "<group>";
+		};
+		272037038485A573939357904FF65BF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00E2535EB71BBB41600FFE0778BF06E8 /* PlainPocketFFT */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3C08392A9408876BBE059BA61EABA035 /* SciKit */ = {
+			isa = PBXGroup;
+			children = (
+				D1F0DD0E7101B26C8B8E424A4EBAD32D /* ArrayDoubleExtensions.swift */,
+			);
+			name = SciKit;
+			path = Sources/SciKit;
+			sourceTree = "<group>";
+		};
+		3E7E1291E4AADB9FA50F2A6F91AB8BD6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5A5DCC6B324BAC8B7921D1BDA73794F /* Pods-NoiseReductionExample */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		533167F5A8C970EBCA1E916244E29691 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA4EC756B6ED494CB8C27EA976178E /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		63F79E207366B8C59E25C9031F5FFBBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D86E4FAB24271684A33305B770052D39 /* PlainPocketFFT.framework */,
+				6D4B008EA3FAB2B479A90B3C5BD4980F /* Pods_NoiseReductionExample.framework */,
+				3367476107DDD00BC0904235A21F3941 /* RosaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A48E54638C24657E0CEE82A3E6437B1 /* RosaKit */ = {
+			isa = PBXGroup;
+			children = (
+				CF4FAE65A2476653A17D55C7904932B3 /* NumKit */,
+				F987271143A4B52E9897C90553C5A6CB /* Pod */,
+				D36915FFD8A496C2E38C333E76C59FFE /* Rosa */,
+				3C08392A9408876BBE059BA61EABA035 /* SciKit */,
+				C7E2394AE772E2733761F61409230758 /* Support Files */,
+			);
+			name = RosaKit;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		A5A5DCC6B324BAC8B7921D1BDA73794F /* Pods-NoiseReductionExample */ = {
+			isa = PBXGroup;
+			children = (
+				95D10B51283D1FBCF6D91669A7671121 /* Pods-NoiseReductionExample.modulemap */,
+				6C07551E0F2F4EE81EDC30DE06BFFCF0 /* Pods-NoiseReductionExample-acknowledgements.markdown */,
+				FBD2428F2847E48E53BEC7FAE762223E /* Pods-NoiseReductionExample-acknowledgements.plist */,
+				F0575F2F30DEB534CB131263B9303893 /* Pods-NoiseReductionExample-dummy.m */,
+				8A8924CCF00F0BCD3D0A4976ECD7BCFA /* Pods-NoiseReductionExample-frameworks.sh */,
+				68B4B71BDD8DD4FD084C8218E094845B /* Pods-NoiseReductionExample-Info.plist */,
+				3990638684D1AA2937AFC686662752BC /* Pods-NoiseReductionExample-umbrella.h */,
+				C9A40D770C1C3A275E3766C1595CAB7E /* Pods-NoiseReductionExample.debug.xcconfig */,
+				B2A9418F77E0B17D2CBE69A1AE3E024C /* Pods-NoiseReductionExample.release.xcconfig */,
+			);
+			name = "Pods-NoiseReductionExample";
+			path = "Target Support Files/Pods-NoiseReductionExample";
+			sourceTree = "<group>";
+		};
+		C7E2394AE772E2733761F61409230758 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5BC01F7476E16B8859FF5F48BCC1BE3 /* RosaKit.modulemap */,
+				D4D7108C9393E27864816DAFED840510 /* RosaKit-dummy.m */,
+				CDF22FF86FDC3E97405A5F0529D1EDE9 /* RosaKit-Info.plist */,
+				C3C50F74C45CE95CCAADD6DFD8458251 /* RosaKit-prefix.pch */,
+				C18AC808E4D145A23B01F3B003786AC8 /* RosaKit-umbrella.h */,
+				8FED53BF9A405C1DF4D527BAB8CF0AEB /* RosaKit.debug.xcconfig */,
+				5B2B9B65C94B158CDE53793C8AAFEB11 /* RosaKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/NoiseReductionExample/Pods/Target Support Files/RosaKit";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F8005C39315AB618FB88FB4BD94836FA /* Development Pods */,
+				EEBA34453494904AC65CEAC90A89FDAC /* Frameworks */,
+				272037038485A573939357904FF65BF4 /* Pods */,
+				63F79E207366B8C59E25C9031F5FFBBC /* Products */,
+				3E7E1291E4AADB9FA50F2A6F91AB8BD6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CF4FAE65A2476653A17D55C7904932B3 /* NumKit */ = {
+			isa = PBXGroup;
+			children = (
+				53C1F13D11F24A7694321364B3749F22 /* ArrayExtensions.swift */,
+				E79C44693911FAF1D8756222A24AED2C /* ArrayMatrixExtensions.swift */,
+				D7707AAC7C9E3C22708BA3114D6F3C9E /* DataExtensions.swift */,
+				DFB7D61619D9D91B46587768B860ADD3 /* FloatingPointExtensions.swift */,
+			);
+			name = NumKit;
+			path = Sources/NumKit;
+			sourceTree = "<group>";
+		};
+		D36915FFD8A496C2E38C333E76C59FFE /* Rosa */ = {
+			isa = PBXGroup;
+			children = (
+				E0C9DB95B6201526247FA3DE85CE5910 /* ArrayLibRosaExtensions.swift */,
+				D18F06CE754351409D3EDD4B80F878D6 /* RosaFloatingPointExtensions.swift */,
+				A2825ED61633CD001A657DAE2AD9815E /* WavFileManager.swift */,
+			);
+			name = Rosa;
+			path = Sources/Rosa;
+			sourceTree = "<group>";
+		};
+		EEBA34453494904AC65CEAC90A89FDAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D46CF8414AAA5345BD3D8BC7EE7BB04 /* PlainPocketFFT.framework */,
+				533167F5A8C970EBCA1E916244E29691 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8005C39315AB618FB88FB4BD94836FA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A48E54638C24657E0CEE82A3E6437B1 /* RosaKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F987271143A4B52E9897C90553C5A6CB /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				68EEFAE17F2FFEBF61EAF8618E0D4A6A /* LICENSE */,
+				1B33481D65CDACA5929FA28D5CB8682E /* README.md */,
+				A5AB2CD696E1B6E1190075BD5100A778 /* RosaKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3CBE265587890DADAA9504C23965EC3B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4173E1B4044468FD9F31224FA52A6903 /* PlainPocketFFT-umbrella.h in Headers */,
+				E40DD720E17B20B5F40D91FB3D73A10B /* PlainPocketFFTRunner.h in Headers */,
+				E70CDB425F1EDA55356EC9F0CC4581EE /* pocketfft.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2AACEC3A6F57F446C8D802A90ECFF37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E59F256B0631EEBF3BD6467ED10970 /* RosaKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E35A30B99664311E5324AD86EBF562 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6D5B75BE65A3EE5179CC794586A7F2 /* Pods-NoiseReductionExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3BE01596A7C4CE2FE91E17F78BD5BFEE /* PlainPocketFFT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E6F86F8377C5942C87A420358F24C94 /* Build configuration list for PBXNativeTarget "PlainPocketFFT" */;
+			buildPhases = (
+				3CBE265587890DADAA9504C23965EC3B /* Headers */,
+				180D2401C1F359561EE3CCA445714A0F /* Sources */,
+				E789F3D5526D26091D74DA566689247F /* Frameworks */,
+				5EA3AE2063BA181282E395B3A3745E2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlainPocketFFT;
+			productName = PlainPocketFFT;
+			productReference = D86E4FAB24271684A33305B770052D39 /* PlainPocketFFT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EE42B31137B9E6797B625651842DB96B /* RosaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D89050D8EDF0B5D7AA0A50541759AA /* Build configuration list for PBXNativeTarget "RosaKit" */;
+			buildPhases = (
+				B2AACEC3A6F57F446C8D802A90ECFF37 /* Headers */,
+				91CF54C1448788EC70CACF756075A0D5 /* Sources */,
+				FBEC55DB315849451C2F819AD055E757 /* Frameworks */,
+				3D74AFDA49C73725FA357BA98B70CB7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B748680DD11B11974E3EEF80FA18A40 /* PBXTargetDependency */,
+			);
+			name = RosaKit;
+			productName = RosaKit;
+			productReference = 3367476107DDD00BC0904235A21F3941 /* RosaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDD5D181DE7A33C301F74DF1B7397549 /* Pods-NoiseReductionExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B7D5DF2CE6B124B36997F83C9F06C3C /* Build configuration list for PBXNativeTarget "Pods-NoiseReductionExample" */;
+			buildPhases = (
+				F7E35A30B99664311E5324AD86EBF562 /* Headers */,
+				EEB876C42CE01238214E6ACB02AF8D24 /* Sources */,
+				25967F3513B15A0A557C005388AF8E78 /* Frameworks */,
+				42877F6BCA7ABA3D05418C47DED3BDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EA8956D74C53EEBAC7DD56FFFA52A5D /* PBXTargetDependency */,
+				CA20C1126779427DA793CFFC746073B1 /* PBXTargetDependency */,
+			);
+			name = "Pods-NoiseReductionExample";
+			productName = "Pods-NoiseReductionExample";
+			productReference = 6D4B008EA3FAB2B479A90B3C5BD4980F /* Pods_NoiseReductionExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 63F79E207366B8C59E25C9031F5FFBBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BE01596A7C4CE2FE91E17F78BD5BFEE /* PlainPocketFFT */,
+				FDD5D181DE7A33C301F74DF1B7397549 /* Pods-NoiseReductionExample */,
+				EE42B31137B9E6797B625651842DB96B /* RosaKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D74AFDA49C73725FA357BA98B70CB7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42877F6BCA7ABA3D05418C47DED3BDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EA3AE2063BA181282E395B3A3745E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		180D2401C1F359561EE3CCA445714A0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				901947D3232FEFF97EF3B81BAA0BAABB /* PlainPocketFFT-dummy.m in Sources */,
+				2C39B6E3733D6AE8D44B3C418C21D241 /* PlainPocketFFTRunner.m in Sources */,
+				6C12C91AA375C109A1E65129A8AB509F /* pocketfft.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91CF54C1448788EC70CACF756075A0D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				537CB37EEABA53817DA58D845E42222D /* ArrayDoubleExtensions.swift in Sources */,
+				E45C3D5506DE31FA9C57396A51A29C36 /* ArrayExtensions.swift in Sources */,
+				A9EF737CBB02372E4536B73CC45CC3CF /* ArrayLibRosaExtensions.swift in Sources */,
+				D8B8CFCD3C86846CBCDE74DC1588BFE3 /* ArrayMatrixExtensions.swift in Sources */,
+				952FACD49E3EE5F2D7B01B31AC7220D9 /* DataExtensions.swift in Sources */,
+				39D3B75EC234C0E3446F5199283DF7ED /* FloatingPointExtensions.swift in Sources */,
+				31CFB09D0AFDDFD55C82F8B28311F61D /* RosaFloatingPointExtensions.swift in Sources */,
+				46CF1612D60DDA9A2EEBBBE4FC66EE79 /* RosaKit-dummy.m in Sources */,
+				7109E7DF6B0134CA2C8B5F8822277EB2 /* WavFileManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEB876C42CE01238214E6ACB02AF8D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74396BF2297C8ACC005E8FAC907E36B4 /* Pods-NoiseReductionExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B748680DD11B11974E3EEF80FA18A40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PlainPocketFFT;
+			target = 3BE01596A7C4CE2FE91E17F78BD5BFEE /* PlainPocketFFT */;
+			targetProxy = A6E2E6FB55FF5FCB7099382679EAC811 /* PBXContainerItemProxy */;
+		};
+		7EA8956D74C53EEBAC7DD56FFFA52A5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PlainPocketFFT;
+			target = 3BE01596A7C4CE2FE91E17F78BD5BFEE /* PlainPocketFFT */;
+			targetProxy = 33F00FDA66D769DF16991F4792C1FC10 /* PBXContainerItemProxy */;
+		};
+		CA20C1126779427DA793CFFC746073B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RosaKit;
+			target = EE42B31137B9E6797B625651842DB96B /* RosaKit */;
+			targetProxy = DB8408AAA9A1FA109072A43E8516D445 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28C49602074ED8585F6C0DA7C4A6BE11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B2B9B65C94B158CDE53793C8AAFEB11 /* RosaKit.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RosaKit/RosaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RosaKit/RosaKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/RosaKit/RosaKit.modulemap";
+				PRODUCT_MODULE_NAME = RosaKit;
+				PRODUCT_NAME = RosaKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2F7C74F69B77674EDA64A2C73EB23173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3280D516FCBC4508A8F4986BE56B0BBA /* PlainPocketFFT.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L9DCNBKQG8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlainPocketFFT/PlainPocketFFT-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlainPocketFFT/PlainPocketFFT-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/PlainPocketFFT/PlainPocketFFT.modulemap";
+				PRODUCT_MODULE_NAME = PlainPocketFFT;
+				PRODUCT_NAME = PlainPocketFFT;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7599BD86FD28576C20F8B9B6B5ACBEC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		82E86ADEE902D988C31C0097217583DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F9D970DE8350295CC1471E6B72AE40 /* PlainPocketFFT.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L9DCNBKQG8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PlainPocketFFT/PlainPocketFFT-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlainPocketFFT/PlainPocketFFT-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/PlainPocketFFT/PlainPocketFFT.modulemap";
+				PRODUCT_MODULE_NAME = PlainPocketFFT;
+				PRODUCT_NAME = PlainPocketFFT;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B1F4B0440C02F50495C2BAE4D7FD64A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FED53BF9A405C1DF4D527BAB8CF0AEB /* RosaKit.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RosaKit/RosaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RosaKit/RosaKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/RosaKit/RosaKit.modulemap";
+				PRODUCT_MODULE_NAME = RosaKit;
+				PRODUCT_NAME = RosaKit;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC701F2FA1EF00699849D97B11A4441F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A40D770C1C3A275E3766C1595CAB7E /* Pods-NoiseReductionExample.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NoiseReductionExample/Pods-NoiseReductionExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-NoiseReductionExample/Pods-NoiseReductionExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C0AB89DB0533D8E2B9201FA6579824B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FAC0A86E83297A9E0AC51D91452E71D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2A9418F77E0B17D2CBE69A1AE3E024C /* Pods-NoiseReductionExample.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NoiseReductionExample/Pods-NoiseReductionExample-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-NoiseReductionExample/Pods-NoiseReductionExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E6F86F8377C5942C87A420358F24C94 /* Build configuration list for PBXNativeTarget "PlainPocketFFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82E86ADEE902D988C31C0097217583DD /* Debug */,
+				2F7C74F69B77674EDA64A2C73EB23173 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7599BD86FD28576C20F8B9B6B5ACBEC9 /* Debug */,
+				C0AB89DB0533D8E2B9201FA6579824B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D89050D8EDF0B5D7AA0A50541759AA /* Build configuration list for PBXNativeTarget "RosaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1F4B0440C02F50495C2BAE4D7FD64A8 /* Debug */,
+				28C49602074ED8585F6C0DA7C4A6BE11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B7D5DF2CE6B124B36997F83C9F06C3C /* Build configuration list for PBXNativeTarget "Pods-NoiseReductionExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC701F2FA1EF00699849D97B11A4441F /* Debug */,
+				FAC0A86E83297A9E0AC51D91452E71D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

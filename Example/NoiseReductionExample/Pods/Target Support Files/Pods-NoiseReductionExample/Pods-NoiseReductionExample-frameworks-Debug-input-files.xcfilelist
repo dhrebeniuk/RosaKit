@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-NoiseReductionExample/Pods-NoiseReductionExample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PlainPocketFFT/PlainPocketFFT.framework
+${BUILT_PRODUCTS_DIR}/RosaKit/RosaKit.framework
