@@ -102,10 +102,10 @@ public extension Array where Element == Double {
 
 public extension Array where Element == [(real: Double, imagine: Double)] {
     
-    func istft() -> [Double] {
+    func istft(hopLength inputHopLength: Int?) -> [Double] {
         let nFFT = 2 * (self.count - 1)
         let winLength = nFFT
-        let hopLength = winLength / 4
+        let hopLength = inputHopLength ?? winLength / 4
 
         let iFFTWindow = [Double].getHannWindow(frameLength: Double(nFFT)).map { [$0] }
         
