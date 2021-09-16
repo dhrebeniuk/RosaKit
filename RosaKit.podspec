@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RosaKit"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "RosaKit it's lightweight port to iOS libRosa"
   s.description  = "RosaKit it's lightweight port to iOS libRosa which written on Python, it's used for sound analyze"
 
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/dhrebeniuk/RosaKit.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/**/*.{swift,h}"
 
-  s.dependency 'PlainPocketFFT', '~> 0.0.4'
+  s.dependency 'PlainPocketFFT', '~> 0.0.6'
   
   s.requires_arc = true
   s.swift_versions = "5.1"
