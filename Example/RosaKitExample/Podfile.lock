@@ -1,7 +1,7 @@
 PODS:
-  - PlainPocketFFT (0.0.6)
+  - PlainPocketFFT (0.0.7)
   - RosaKit (0.0.4):
-    - PlainPocketFFT (~> 0.0.6)
+    - PlainPocketFFT (~> 0.0.7)
 
 DEPENDENCIES:
   - RosaKit (from `../../`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  PlainPocketFFT: eba1ff907f2b99538bd35f4c505d449002d1b6ea
-  RosaKit: c54b73c78186a3b034622b3d9ffbaab1a34bd7ed
+  PlainPocketFFT: c913d354cb6294c940e034fddd8d6df7c9e0eae8
+  RosaKit: fc4fd0bd306a7e846d4bf234a1b74555a3ad4960
 
 PODFILE CHECKSUM: 5a26e4d412be76e11d075c662b00c33386142ac1
 
