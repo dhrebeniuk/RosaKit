@@ -93,7 +93,8 @@ public extension Array where Element == Double {
     }
         
     func melspectrogram(nFFT: Int = 2048, hopLength: Int = 512, sampleRate: Int = 22050, melsCount: Int = 128) -> [[Double]] {
-        let spectrogram = self.stft(nFFT: nFFT, hopLength: hopLength).map { $0.map { pow($0.real, 2.0) + pow($0.imagine, 2.0) } }
+        let spectrogram = self.stft(nFFT: nFFT, hopLength: hopLength)
+            .map { $0.map { sqrt(pow($0.real, 2.0) + pow($0.imagine, 2.0)) } }
         let melBasis = [Double].createMelFilter(sampleRate: sampleRate, FTTCount: nFFT, melsCount: melsCount)
         return melBasis.dot(matrix: spectrogram)
     }
