@@ -126,8 +126,13 @@ class SpectrogramView: NSScrollView {
             let items = delegate?.elementsValueInSpectrogram(view: self, at: index) ?? [Double]()
             if items.count > 0 {
                 for value in items {
-                    let dbValue = value*100
-                    bytes.append(UInt8(round(min(max(dbValue, 0), 255))))
+                    if value.isNaN == false {
+                        let dbValue = value*100
+                        bytes.append(UInt8(round(min(max(dbValue, 0), 255))))
+                    }
+                    else {
+                        bytes.append(0)
+                    }
                 }
             }
             else {

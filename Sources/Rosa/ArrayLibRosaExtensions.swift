@@ -98,6 +98,30 @@ public extension Array where Element == Double {
         return melBasis.dot(matrix: spectrogram)
     }
     
+    func mfcc(nMFCC: Int = 20, nFFT: Int = 2048, hopLength: Int = 512, sampleRate: Int = 22050, melsCount: Int = 128) -> [[Double]] {
+        let melSpectrogram = self.melspectrogram(nFFT: nFFT, hopLength: hopLength, sampleRate: sampleRate, melsCount: melsCount)
+        var S = melSpectrogram.map { $0.powerToDB() }
+        
+        let cols = S.count
+        let rows = S[0].count
+        
+        var resultArray = [Double](repeating: 0.0, count: cols*rows)
+
+        S.withUnsafeMutableBytes { flatData -> Void in
+            let sourceDoubleData = flatData.bindMemory(to: Double.self).baseAddress
+            
+            resultArray.withUnsafeMutableBytes {  destinationData -> Void in
+                let destinationDoubleData = destinationData.bindMemory(to: Double.self).baseAddress
+
+                PlainPocketFFTRunner.execute_dct(sourceDoubleData, result: destinationDoubleData, dctType: 2, inorm: 1, cols: Int32(cols), rows: Int32(rows))
+            }
+        }
+        
+        let mfccResult = resultArray.chunked(into: rows)[0..<nMFCC]
+        
+        return [[Double]].init(mfccResult)
+    }
+    
 }
 
 public extension Array where Element == [(real: Double, imagine: Double)] {
