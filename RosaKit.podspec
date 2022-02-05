@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/dhrebeniuk/RosaKit.git", :tag => "#{s.version}" }
   s.source_files  = "Sources/**/*.{swift,h}"
 
-  s.dependency 'PlainPocketFFT', '~> 0.0.7'
+  s.dependency 'PlainPocketFFT', '~> 0.0.8'
   
   s.requires_arc = true
   s.swift_versions = "5.1"
