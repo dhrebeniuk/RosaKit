@@ -11,7 +11,7 @@ import Metal
 import MetalKit
 import RosaKit
 
-protocol SpectrogramViewDataSource: class {
+protocol SpectrogramViewDataSource: AnyObject {
     
     func elementsCountInSpectrogram(view: SpectrogramView) -> Int
     
