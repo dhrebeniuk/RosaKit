@@ -63,15 +63,13 @@ class MainViewController: NSSplitViewController {
                 }
                 result.append(resultRow)
             }
-            
-            let istftData = stftData.istft(hopLength: 512).map { $0 }[0..<chunkSize]
+            let istftData = result.istft(hopLength: 512).map { $0 }[0..<chunkSize]
 
             newDoubleRawData.append(contentsOf: istftData)
-           
         }
         
         let newRawData = newDoubleRawData
-            .map { Int16(max(min(($0*32768.0*128.0), Double(Int16.max)), Double(Int16.min))) }
+            .map { Int16(max(min(($0*32768.0), Double(Int16.max)), Double(Int16.min))) }
         
         let newData = newRawData.withUnsafeBufferPointer {Data(buffer: $0)}
         resultSpectrogramViewController?.fileData = (fileDescriptor: soundFile!, data: newData)
