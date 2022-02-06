@@ -39,14 +39,19 @@ class MainViewController: NSSplitViewController {
         var newDoubleRawData = [Double]()
         
         for index in 0..<chunksCount {
-            let samples = Array(rawData?[chunkSize*index..<chunkSize*(index+1)] ?? []).map { Double($0)/32768.0 }
+            let samples = Array(rawData?[chunkSize*index..<chunkSize*(index+1)] ?? [])
             let floatSamples = samples.map { Double($0)/32768.0 }
             let stftData = floatSamples.stft(nFFT: 1024, hopLength: 512)
-            
-            let mlArray = try? MLMultiArray(stftData.flatMap { $0.compactMap { Float32($0.real) }  } )
-            let soundNoiseReductionInput = SoundNoiseReductionInput.init(input: mlArray!)
+                        
+            var stftDataReal = stftData.flatMap { $0.compactMap { Float32($0.real) }  }
+            let mlArray = stftDataReal.withUnsafeMutableBytes {
+                $0.baseAddress.flatMap {
+                    try? MLMultiArray(dataPointer: $0, shape: [1, 1, 513, 81], dataType: MLMultiArrayDataType.float32, strides: [(513 - 1)*81, (513 - 1)*81, 81, 1] as [NSNumber], deallocator: nil)
+                }
+            }
+                        
+            let soundNoiseReductionInput = SoundNoiseReductionInput(input: mlArray!)
             let output = try? soundNoiseReduction?.prediction(input: soundNoiseReductionInput)
-            
             
             var result = [[(real: Double, imagine: Double)]]()
             for row in 0..<stftData.count {
