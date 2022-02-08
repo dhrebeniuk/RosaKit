@@ -7,7 +7,7 @@ let package = Package(name: "RosaKit",
                       products: [.library(name: "RosaKit",
                                           targets: ["RosaKit"])],
                       dependencies: [
-                        .package(url: "https://github.com/dhrebeniuk/plain-pocketfft.git", from: "0.0.4")
+                        .package(url: "https://github.com/dhrebeniuk/plain-pocketfft.git")
                       ], targets: [.target(name: "RosaKit", dependencies: ["PlainPocketFFT"],
                                            path: "Sources")],
                       swiftLanguageVersions: [.v5])
