@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import PocketFFTSwift
-import PlainPocketFFTSwift
+import PocketFFT
+import PlainPocketFFT
 
 
 public extension Array where Iterator.Element: FloatingPoint {
