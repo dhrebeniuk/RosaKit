@@ -1,6 +1,0 @@
-framework module PlainPocketFFT {
-  umbrella header "PlainPocketFFT-umbrella.h"
-
-  export *
-  module * { export * }
-}
