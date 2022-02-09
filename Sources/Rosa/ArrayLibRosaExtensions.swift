@@ -7,7 +7,9 @@
 //
 
 import Foundation
-import PlainPocketFFT
+import PocketFFTSwift
+import PlainPocketFFTSwift
+
 
 public extension Array where Iterator.Element: FloatingPoint {
     
@@ -113,7 +115,7 @@ public extension Array where Element == Double {
             resultArray.withUnsafeMutableBytes {  destinationData -> Void in
                 let destinationDoubleData = destinationData.bindMemory(to: Double.self).baseAddress
 
-                PlainPocketFFTRunner.execute_dct(sourceDoubleData, result: destinationDoubleData, dctType: 2, inorm: 1, cols: Int32(cols), rows: Int32(rows))
+                PocketFFTRunner.execute_dct(sourceDoubleData, result: destinationDoubleData, dctType: 2, inorm: 1, cols: Int32(cols), rows: Int32(rows))
             }
         }
         
@@ -202,7 +204,7 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
             let stftChunkDataDoubleData = stftChunkData.bindMemory(to: Double.self).baseAddress
             resultArray.withUnsafeMutableBytes { (resultArrayFlatData) -> Void in
                 let destinationDoubleData = resultArrayFlatData.bindMemory(to: Double.self).baseAddress
-                PlainPocketFFTRunner.execute_real_backward(stftChunkDataDoubleData, result: destinationDoubleData, cols: Int32(slicedMatrix.count), rows: Int32(slicedMatrix.first?.count ?? 0), fct: fct)
+                execute_real_backward(stftChunkDataDoubleData, destinationDoubleData, npy_intp(Int32(slicedMatrix.count)), npy_intp(Int32(slicedMatrix.first?.count ?? 0)), fct)
             }
         }
         
@@ -231,7 +233,7 @@ extension Array where Element == [Double] {
             let destinationDoubleData = destinationData.bindMemory(to: Double.self).baseAddress
             flatMatrix.withUnsafeMutableBytes { (flatData) -> Void in
                 let sourceDoubleData = flatData.bindMemory(to: Double.self).baseAddress
-                PlainPocketFFTRunner.execute_real_forward(sourceDoubleData, result: destinationDoubleData, cols: Int32(cols), rows: Int32(rows), fct: 1)
+                execute_real_forward(sourceDoubleData, destinationDoubleData, npy_intp(Int32(cols)), npy_intp(Int32(rows)), 1)
             }
         }
 
