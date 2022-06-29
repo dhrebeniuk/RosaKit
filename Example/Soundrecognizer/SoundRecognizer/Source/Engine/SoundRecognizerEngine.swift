@@ -20,7 +20,8 @@ public class SoundRecognizerEngine {
     let windowLength: Int
 
     public init(sampleRate: Int = 22050, windowLength length: Int) {
-        self.model = SoundRecognition()
+        let config = MLModelConfiguration()
+        self.model = SoundRecognition.init(configuration: config)
         
         self.sampleRate = sampleRate
         self.melBasis = [Double].createMelFilter(sampleRate: sampleRate, FTTCount: 1024, melsCount: 128)
@@ -50,7 +51,7 @@ public class SoundRecognizerEngine {
             let powerSpectrogram = melSpectrogram.normalizeAudioPowerArray()
             let filteredSpectrogram = powerSpectrogram//.map { $0[0..<161] }
 
-            let mlArray = try? MLMultiArray(shape: [NSNumber(value: 1), NSNumber(value: 128), NSNumber(value: 81)], dataType: MLMultiArrayDataType.double)
+            let mlArray = try? MLMultiArray(shape: [NSNumber(value: 1), NSNumber(value: 128), NSNumber(value: 216)], dataType: MLMultiArrayDataType.double)
 
             let flatSpectrogram = filteredSpectrogram.flatMap { $0 }
             for index in 0..<flatSpectrogram.count {
@@ -62,11 +63,6 @@ public class SoundRecognizerEngine {
                 let options = MLPredictionOptions()
                 options.usesCPUOnly = true
                 let result = try model.prediction(input: input, options: options)
-                
-//                self.lstm_1_c_out = result.lstm_9_c_out
-//                self.lstm_1_h_out = result.lstm_9_h_out
-//                self.lstm_2_c_out = result.lstm_10_c_out
-//                self.lstm_2_h_out = result.lstm_10_h_out
                 
                 var array = [Double]()
                 for index in 0..<result.output1.count {

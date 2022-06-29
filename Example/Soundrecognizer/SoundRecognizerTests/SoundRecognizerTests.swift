@@ -28,7 +28,7 @@ class SoundRecognizerTests: XCTestCase {
         let int16Array = soundFile?.data.int16Array.map { Double($0)/32768.0 }
         
         let xshape = int16Array?.count ?? 0
-        let size = 2048*20
+        let size = 110250
         let offset = size/8
         let count = xshape/offset - 30/2
         
