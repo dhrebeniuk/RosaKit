@@ -53,7 +53,7 @@ class SpectrogramViewController: NSViewController {
         let rawData = fileData.data.int16Array
         
         for index in 0..<chunksCount {
-            let samples = Array(rawData[chunkSize*index..<chunkSize*(index+1)] ).map { Double($0)/32768.0 }
+            let samples = Array(rawData[chunkSize*index..<chunkSize*(index+1)] ).map { Double($0)/Double(Int16.max) }
             let powerSpectrogram = samples.melspectrogram(nFFT: 1024, hopLength: 512, sampleRate: Int(sampleRate), melsCount: 128).map { $0.normalizeAudioPower() }
             spectrograms.append(contentsOf: powerSpectrogram.transposed)
         }
