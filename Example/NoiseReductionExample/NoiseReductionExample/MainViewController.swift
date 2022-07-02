@@ -40,7 +40,7 @@ class MainViewController: NSSplitViewController {
         
         for index in 0..<chunksCount {
             let samples = Array(rawData?[chunkSize*index..<chunkSize*(index+1)] ?? [])
-            let floatSamples = samples.map { Double($0)/32768.0 }
+            let floatSamples = samples.map { Double($0)/Double(Int16.max) }
             let stftData = floatSamples.stft(nFFT: 1024, hopLength: 512)
                         
             var stftDataReal = stftData.flatMap { $0.compactMap { Float32($0.real) }  }
