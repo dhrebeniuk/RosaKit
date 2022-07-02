@@ -12,7 +12,7 @@ import RosaKit
 
 public class SoundRecognizerEngine {
     
-    private var model: SoundRecognition
+    private var model: SoundRecognition?
     private var samplesCollection: [Double] = []
 
     let melBasis: [[Double]]
@@ -21,7 +21,7 @@ public class SoundRecognizerEngine {
 
     public init(sampleRate: Int = 22050, windowLength length: Int) {
         let config = MLModelConfiguration()
-        self.model = SoundRecognition.init(configuration: config)
+        self.model = try? SoundRecognition.init(configuration: config)
         
         self.sampleRate = sampleRate
         self.melBasis = [Double].createMelFilter(sampleRate: sampleRate, FTTCount: 1024, melsCount: 128)
@@ -62,11 +62,11 @@ public class SoundRecognizerEngine {
                 let input  = SoundRecognitionInput(input1: mlArray!)
                 let options = MLPredictionOptions()
                 options.usesCPUOnly = true
-                let result = try model.prediction(input: input, options: options)
+                let result = try model?.prediction(input: input, options: options)
                 
                 var array = [Double]()
-                for index in 0..<result.output1.count {
-                    array.append(result.output1[index].doubleValue)
+                for index in 0..<(result?.output1.count ?? 0) {
+                    array.append(result?.output1[index].doubleValue ?? 0.0)
                 }
 
                 let maxPercentage = array.reduce(0) { max($0, $1) }

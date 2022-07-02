@@ -1,16 +1,27 @@
 PODS:
-  - RosaKit (0.0.1)
+  - PlainPocketFFT (0.0.9)
+  - PocketFFT (0.0.1)
+  - RosaKit (0.0.8):
+    - PlainPocketFFT (~> 0.0.9)
+    - PocketFFT (~> 0.0.1)
 
 DEPENDENCIES:
   - RosaKit (from `../../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - PlainPocketFFT
+    - PocketFFT
 
 EXTERNAL SOURCES:
   RosaKit:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  RosaKit: 66e7081543725de4a538bb2d182d7d076da68b5a
+  PlainPocketFFT: 3763f37fba0737e457ed1a3b9b7bfa70c00ff213
+  PocketFFT: cdbe7ef5b7cd08520655d85d03d701b5ba35fdec
+  RosaKit: a268816d50169a302d1dab0df651a5ac0ac506c9
 
 PODFILE CHECKSUM: a8c03337a79ed750a0283b33f548b9546e1b99fc
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.3
