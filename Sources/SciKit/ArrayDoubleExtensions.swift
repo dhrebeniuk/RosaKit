@@ -13,26 +13,18 @@ extension Array where Iterator.Element: FloatingPoint {
     func floatingPointStrided(shape: (width: Int, height: Int), stride: (xStride: Int, yStride: Int)? = nil) -> [[Element]] {
         var resultArray: [[Element]] = []
         
-        var lineArray = [Element]()
-                
         let byteStrideX = stride?.xStride ?? 1
         let byteStrideY = stride?.yStride ?? shape.height
         var byteOffsetX: Int = 0
         var byteOffsetY: Int = 0
-        for _ in 0..<shape.width*shape.height {
-            
-            let value = self[byteOffsetX + byteOffsetY]
-            lineArray.append(value)
-            
-            byteOffsetX += byteStrideX
-
-            if lineArray.count == shape.height {
-                resultArray.append(lineArray)
-                lineArray = [Element]()
+        for yIndex in 0..<shape.width {
+            var lineArray = [Element]()
+            for xIndex in 0..<shape.height {
+                let value = self[(yIndex+xIndex)%self.count]
                 
-                byteOffsetY += byteStrideY
-                byteOffsetX = 0
+                lineArray.append(value)
             }
+            resultArray.append(lineArray)
         }
         
         return resultArray
@@ -73,12 +65,33 @@ extension Array where Iterator.Element: FloatingPoint {
         return result
     }
     
+}
+
+extension Array where Iterator.Element == Double {
+            
     func frame(frameLength: Int = 2048, hopLength: Int = 512) -> [[Element]] {
-        
         let framesCount = 1 + (self.count - frameLength) / hopLength
-        let strides = MemoryLayout.size(ofValue: Element(0))
+        let strides = MemoryLayout.size(ofValue: Double(0))
         
-        return strided(shape: (width: frameLength, height: framesCount), stride: (xStride: strides*hopLength, yStride: strides))
+        let outputShape = (width: self.count - frameLength + 1, height: frameLength)
+        let outputStrides = (xStride: strides*hopLength, yStride: strides)
+                
+        let verticalSize = Int(ceil(Float(outputShape.width)/Float(hopLength)))
+              
+        var xw = [[Double]]()
+        
+        for yIndex in 0..<verticalSize {
+            var lineArray = [Double]()
+
+            for xIndex in 0..<frameLength {
+                let value = self[((yIndex*hopLength)+xIndex)%self.count]
+                
+                lineArray.append(value)
+            }
+            xw.append(lineArray)
+        }
+        
+        return xw.transposed
     }
-    
+                                       
 }
