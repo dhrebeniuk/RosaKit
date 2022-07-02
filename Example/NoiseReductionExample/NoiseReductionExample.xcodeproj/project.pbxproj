@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		D02153070BBB25EBBF45B228 /* Pods_NoiseReductionExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547DB39160D230B33BCAB90B /* Pods_NoiseReductionExample.framework */; };
 		EB5C7E9226E01D0D003728EB /* SoundNoiseReduction.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EB5C7E9126E01D0D003728EB /* SoundNoiseReduction.mlmodel */; };
-		EB5C7E9426E021E6003728EB /* test_source-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB5C7E9326E021E6003728EB /* test_source-2.wav */; };
+		EB5C7E9426E021E6003728EB /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB5C7E9326E021E6003728EB /* test.wav */; };
 		EBF4BEDD248EE7AF00C6F6B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4BEDC248EE7AF00C6F6B0 /* AppDelegate.swift */; };
 		EBF4BEDF248EE7AF00C6F6B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4BEDE248EE7AF00C6F6B0 /* MainViewController.swift */; };
 		EBF4BEE1248EE7B400C6F6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF4BEE0248EE7B400C6F6B0 /* Assets.xcassets */; };
 		EBF4BEE4248EE7B400C6F6B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF4BEE2248EE7B400C6F6B0 /* Main.storyboard */; };
-		EBF4BEED248EE7E500C6F6B0 /* test.wav in Resources */ = {isa = PBXBuildFile; fileRef = EBF4BEEC248EE7E500C6F6B0 /* test.wav */; };
 		EBF4BEF4248EE86300C6F6B0 /* SpectrogramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4BEF1248EE86200C6F6B0 /* SpectrogramViewController.swift */; };
 		EBF4BEF8248EE88100C6F6B0 /* SpectrogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF4BEF7248EE88100C6F6B0 /* SpectrogramView.swift */; };
 		EBF4BF06248EEB5C00C6F6B0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EBF4BF01248EEB5B00C6F6B0 /* Shaders.metal */; };
@@ -31,14 +30,13 @@
 		58425DFF2D9CD64C40EE3E85 /* Pods-NoiseReductionExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoiseReductionExample.release.xcconfig"; path = "Target Support Files/Pods-NoiseReductionExample/Pods-NoiseReductionExample.release.xcconfig"; sourceTree = "<group>"; };
 		EB5C7E9026E00B28003728EB /* NoiseReductionExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NoiseReductionExample.entitlements; sourceTree = "<group>"; };
 		EB5C7E9126E01D0D003728EB /* SoundNoiseReduction.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SoundNoiseReduction.mlmodel; sourceTree = "<group>"; };
-		EB5C7E9326E021E6003728EB /* test_source-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "test_source-2.wav"; sourceTree = "<group>"; };
+		EB5C7E9326E021E6003728EB /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
 		EBF4BED9248EE7AF00C6F6B0 /* NoiseReductionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoiseReductionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF4BEDC248EE7AF00C6F6B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF4BEDE248EE7AF00C6F6B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EBF4BEE0248EE7B400C6F6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBF4BEE3248EE7B400C6F6B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBF4BEE5248EE7B400C6F6B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBF4BEEC248EE7E500C6F6B0 /* test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = test.wav; sourceTree = "<group>"; };
 		EBF4BEF1248EE86200C6F6B0 /* SpectrogramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectrogramViewController.swift; sourceTree = "<group>"; };
 		EBF4BEF7248EE88100C6F6B0 /* SpectrogramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectrogramView.swift; sourceTree = "<group>"; };
 		EBF4BF01248EEB5B00C6F6B0 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
@@ -111,8 +109,7 @@
 				EB5C7E9126E01D0D003728EB /* SoundNoiseReduction.mlmodel */,
 				EBF4BEE2248EE7B400C6F6B0 /* Main.storyboard */,
 				EBF4BEE5248EE7B400C6F6B0 /* Info.plist */,
-				EB5C7E9326E021E6003728EB /* test_source-2.wav */,
-				EBF4BEEC248EE7E500C6F6B0 /* test.wav */,
+				EB5C7E9326E021E6003728EB /* test.wav */,
 			);
 			path = NoiseReductionExample;
 			sourceTree = "<group>";
@@ -199,8 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5C7E9426E021E6003728EB /* test_source-2.wav in Resources */,
-				EBF4BEED248EE7E500C6F6B0 /* test.wav in Resources */,
+				EB5C7E9426E021E6003728EB /* test.wav in Resources */,
 				EBF4BEE1248EE7B400C6F6B0 /* Assets.xcassets in Resources */,
 				EBF4BEE4248EE7B400C6F6B0 /* Main.storyboard in Resources */,
 			);
@@ -401,10 +397,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NoiseReductionExample/NoiseReductionExample.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L9DCNBKQG8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = NoiseReductionExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
