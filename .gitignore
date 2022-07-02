@@ -8,4 +8,10 @@
 Example/RosaKitExample/Pods/*
 IDEWorkspaceChecks.plist
 Example/*/Pods
-Example/Soundrecognizer/Podfile.lock
+Podfile.lock
+Example/.DS_Store
+.DS_Store
+xcuserdata/*
+*.xcbkptlist
+Example/Soundrecognizer/SoundRecognizer.xcworkspace/xcuserdata/
+*xcschememanagement.plist
