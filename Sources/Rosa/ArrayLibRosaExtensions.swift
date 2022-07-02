@@ -81,7 +81,7 @@ public extension Array where Element == Double {
     func stft(nFFT: Int = 256, hopLength: Int = 1024) -> [[(real: Double, imagine: Double)]] {
         let FFTWindow = [Double].getHannWindow(frameLength: Double(nFFT)).map { [$0] }
 
-        let centered = self.reflectPad(fftSize: nFFT/2)
+        let centered = self.reflectPad(fftSize: nFFT)
         
         let yFrames = centered.frame(frameLength: nFFT, hopLength: hopLength)
 

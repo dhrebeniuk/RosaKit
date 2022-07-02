@@ -35,18 +35,12 @@ extension Array where Iterator.Element: FloatingPoint {
     }
     
     func reflectPad(fftSize: Int) -> [Element] {
-        var array = self
-      
-        for index in 0..<fftSize {
-            let leftElement = self[index + 1]
-            let oldArray = array
-            array = [leftElement]
-            array.append(contentsOf: oldArray)
-            
-            let rightElement = self[self.count - 1 - index - 1]
-            array.append(rightElement)
-        }
+        var array = [Element]()
         
+        array.append(contentsOf: [Element].init(repeating: Element(0), count: fftSize/2))
+        array.append(contentsOf: self)
+        array.append(contentsOf: [Element].init(repeating: Element(0), count: fftSize/2))
+
         return array
     }
  
