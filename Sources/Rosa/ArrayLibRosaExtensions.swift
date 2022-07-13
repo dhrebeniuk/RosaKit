@@ -175,8 +175,23 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
             
             frame += blT - blS
         }
-
-         // TODO: filters.window_sumsquare
+        
+        let winSize = nFFT + hopLength * (nFramesCount - 1)
+        var win = [Double](repeating: 0.0, count: winSize)
+        let winSQ = [Double].getHannWindow(frameLength: Double(nFFT)).map { $0*$0 }
+        
+        for index in 0..<nFramesCount {
+            let sample = index * hopLength
+            for item in 0..<winSQ.count {
+                win[sample + item] += winSQ[item]
+            }
+        }
+        
+        for index in 0..<win.count {
+            if win[index] > Double.leastNonzeroMagnitude {
+                y[index] /= win[index];
+            }
+        }
         
         return y
     }
@@ -205,11 +220,11 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
             let stftChunkDataDoubleData = stftChunkData.bindMemory(to: Double.self).baseAddress
             resultArray.withUnsafeMutableBytes { (resultArrayFlatData) -> Void in
                 let destinationDoubleData = resultArrayFlatData.bindMemory(to: Double.self).baseAddress
-                execute_real_backward(stftChunkDataDoubleData, destinationDoubleData, npy_intp(Int32(slicedMatrix.count)), npy_intp(Int32(slicedMatrix.first?.count ?? 0)), fct)
+                execute_real_backward(stftChunkDataDoubleData, destinationDoubleData, npy_intp(slicedMatrix.count), npy_intp(slicedMatrix.first?.count ?? 0), fct)
             }
         }
         
-        let backSTFT = resultArray.chunked(into: invNorm)
+        let backSTFT = resultArray.chunked(into: slicedMatrix.first?.count ?? 0)
         
         let backSTFTTransposed = backSTFT.transposed
 
