@@ -79,7 +79,7 @@ public extension Array where Iterator.Element: FloatingPoint {
 public extension Array where Element == Double {
     
     func stft(nFFT: Int = 256, hopLength: Int = 1024) -> [[(real: Double, imagine: Double)]] {
-        let FFTWindow = [Double].getHannWindow(frameLength: Double(nFFT)).map { [$0] }
+        let FFTWindow = [Double].getHannWindow(frameLength: (nFFT)).map { [$0] }
 
         let centered = self.reflectPad(fftSize: nFFT)
         
@@ -134,7 +134,7 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
         let winLength = nFFT
         let hopLength = inputHopLength ?? winLength / 4
 
-        let iFFTWindow = [Double].getHannWindow(frameLength: Double(nFFT)).map { [$0] }
+        let iFFTWindow = [Double].getHannWindow(frameLength: nFFT).map { [$0] }
         
         let nFramesCount = self[0].count
 
@@ -176,20 +176,11 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
             frame += blT - blS
         }
         
-        let winSize = nFFT + hopLength * (nFramesCount - 1)
-        var win = [Double](repeating: 0.0, count: winSize)
-        let winSQ = [Double].getHannWindow(frameLength: Double(nFFT)).map { $0*$0 }
+        let winSQ = [Double].windowHannSumsquare(nFrames: nFramesCount, winLength: winLength, nFFt: nFFT, hopLength: hopLength)
         
-        for index in 0..<nFramesCount {
-            let sample = index * hopLength
-            for item in 0..<winSQ.count {
-                win[sample + item] += winSQ[item]
-            }
-        }
-        
-        for index in 0..<win.count {
-            if win[index] > Double.leastNonzeroMagnitude {
-                y[index] /= win[index];
+        for index in 0..<winSQ.count {
+            if winSQ[index] > Double.leastNonzeroMagnitude {
+                y[index] /= (winSQ[index]);
             }
         }
         
@@ -227,7 +218,6 @@ public extension Array where Element == [(real: Double, imagine: Double)] {
         let backSTFT = resultArray.chunked(into: slicedMatrix.first?.count ?? 0)
         
         let backSTFTTransposed = backSTFT.transposed
-
         
         return backSTFTTransposed
     }
