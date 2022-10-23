@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		EB23845423C0F209001716BE /* RosaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23845223C0F208001716BE /* RosaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB23846123C0F224001716BE /* RosaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23845F23C0F224001716BE /* RosaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB23846B23C0F280001716BE /* pocketfft.c in Sources */ = {isa = PBXBuildFile; fileRef = EB23846923C0F280001716BE /* pocketfft.c */; };
-		EB23846C23C0F280001716BE /* pocketfft.c in Sources */ = {isa = PBXBuildFile; fileRef = EB23846923C0F280001716BE /* pocketfft.c */; };
 		EB23847523C0F29A001716BE /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */; };
 		EB23847623C0F29A001716BE /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */; };
 		EB23847723C0F29A001716BE /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847123C0F29A001716BE /* ArrayExtensions.swift */; };
@@ -23,8 +21,6 @@
 		EB23847E23C0F29A001716BE /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23847423C0F29A001716BE /* DataExtensions.swift */; };
 		EB23848123C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23848023C0F2A6001716BE /* ArrayLibRosaExtensions.swift */; };
 		EB23848223C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB23848023C0F2A6001716BE /* ArrayLibRosaExtensions.swift */; };
-		EB23849C23C115ED001716BE /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23846A23C0F280001716BE /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB23849D23C115EE001716BE /* pocketfft.h in Headers */ = {isa = PBXBuildFile; fileRef = EB23846A23C0F280001716BE /* pocketfft.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB2384BE23C11DD1001716BE /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2384BD23C11DD1001716BE /* WavFileManager.swift */; };
 		EB2384BF23C11DD1001716BE /* WavFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2384BD23C11DD1001716BE /* WavFileManager.swift */; };
 		EBA39C9D23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA39C9C23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift */; };
@@ -38,8 +34,6 @@
 		EB23845D23C0F224001716BE /* RosaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB23845F23C0F224001716BE /* RosaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosaKit.h; sourceTree = "<group>"; };
 		EB23846023C0F224001716BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB23846923C0F280001716BE /* pocketfft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pocketfft.c; sourceTree = "<group>"; };
-		EB23846A23C0F280001716BE /* pocketfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocketfft.h; sourceTree = "<group>"; };
 		EB23847023C0F29A001716BE /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingPointExtensions.swift; sourceTree = "<group>"; };
 		EB23847123C0F29A001716BE /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		EB23847223C0F29A001716BE /* ArrayMatrixExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayMatrixExtensions.swift; sourceTree = "<group>"; };
@@ -84,7 +78,6 @@
 				EB23848323C0F2B2001716BE /* SciKit */,
 				EB23847F23C0F29D001716BE /* Rosa */,
 				EB23846F23C0F284001716BE /* NumKit */,
-				EB23849B23C114A2001716BE /* CLibs */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -116,15 +109,6 @@
 			path = RosaKitiOS;
 			sourceTree = "<group>";
 		};
-		EB23846823C0F273001716BE /* pocketfft */ = {
-			isa = PBXGroup;
-			children = (
-				EB23846923C0F280001716BE /* pocketfft.c */,
-				EB23846A23C0F280001716BE /* pocketfft.h */,
-			);
-			path = pocketfft;
-			sourceTree = "<group>";
-		};
 		EB23846F23C0F284001716BE /* NumKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,14 +138,6 @@
 			path = SciKit;
 			sourceTree = "<group>";
 		};
-		EB23849B23C114A2001716BE /* CLibs */ = {
-			isa = PBXGroup;
-			children = (
-				EB23846823C0F273001716BE /* pocketfft */,
-			);
-			path = CLibs;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -170,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB23845423C0F209001716BE /* RosaKit.h in Headers */,
-				EB23849C23C115ED001716BE /* pocketfft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB23846123C0F224001716BE /* RosaKit.h in Headers */,
-				EB23849D23C115EE001716BE /* pocketfft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +262,6 @@
 				EBA39C9D23C8635F00DC09D6 /* RosaFloatingPointExtensions.swift in Sources */,
 				EB23848123C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */,
 				EB23847923C0F29A001716BE /* ArrayMatrixExtensions.swift in Sources */,
-				EB23846B23C0F280001716BE /* pocketfft.c in Sources */,
 				EB23847D23C0F29A001716BE /* DataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +277,6 @@
 				EBA39C9E23C864D300DC09D6 /* RosaFloatingPointExtensions.swift in Sources */,
 				EB23848223C0F2A6001716BE /* ArrayLibRosaExtensions.swift in Sources */,
 				EB23847A23C0F29A001716BE /* ArrayMatrixExtensions.swift in Sources */,
-				EB23846C23C0F280001716BE /* pocketfft.c in Sources */,
 				EB23847E23C0F29A001716BE /* DataExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
