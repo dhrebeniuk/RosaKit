@@ -6,6 +6,7 @@ target "SoundRecognizer" do
     inhibit_all_warnings!
 	
     pod 'RosaKit', :path => '../../'
+    pod 'ZIPFoundation'
 
 end
 
@@ -17,5 +18,3 @@ target "SoundRecognizerTests" do
     pod 'RosaKit', :path => '../../'
 
 end
-
-

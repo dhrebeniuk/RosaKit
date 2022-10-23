@@ -4,14 +4,17 @@ PODS:
   - RosaKit (0.0.8):
     - PlainPocketFFT (~> 0.0.9)
     - PocketFFT (~> 0.0.1)
+  - ZIPFoundation (0.9.13)
 
 DEPENDENCIES:
   - RosaKit (from `../../`)
+  - ZIPFoundation
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - PlainPocketFFT
     - PocketFFT
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   RosaKit:
@@ -21,7 +24,8 @@ SPEC CHECKSUMS:
   PlainPocketFFT: 3763f37fba0737e457ed1a3b9b7bfa70c00ff213
   PocketFFT: cdbe7ef5b7cd08520655d85d03d701b5ba35fdec
   RosaKit: a268816d50169a302d1dab0df651a5ac0ac506c9
+  ZIPFoundation: ae5b4b813d216d3bf0a148773267fff14bd51d37
 
-PODFILE CHECKSUM: a8c03337a79ed750a0283b33f548b9546e1b99fc
+PODFILE CHECKSUM: ff4c09aef33bea7c651d82102e3d8ba84dcd908d
 
 COCOAPODS: 1.11.3

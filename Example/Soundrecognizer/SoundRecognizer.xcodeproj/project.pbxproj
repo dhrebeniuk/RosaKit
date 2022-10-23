@@ -28,6 +28,7 @@
 		EBCD0E5B24A47AFE002737F4 /* SoundRecognition.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EBCD0E5A24A47AFE002737F4 /* SoundRecognition.mlmodel */; };
 		EBCD0E6024A4DD8C002737F4 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD0E5F24A4DD8C002737F4 /* CategoryRepository.swift */; };
 		EBCD0E6224A4DDED002737F4 /* SoundRecognizerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD0E6124A4DDED002737F4 /* SoundRecognizerEngine.swift */; };
+		EBF20B8C2888945200E5D5B9 /* SaveDocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF20B8B2888945200E5D5B9 /* SaveDocumentPicker.swift */; };
 		EBF20C0324C59C8700AD668D /* 1-84393-A-32.wav in Resources */ = {isa = PBXBuildFile; fileRef = EBF20C0224C59C8700AD668D /* 1-84393-A-32.wav */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		EB60142323B63EDB00DDCB3D /* MicrophoneReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrophoneReader.swift; sourceTree = "<group>"; };
 		EB60142723B6518C00DDCB3D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EB6B9CB824DDE64A004E6BD9 /* 1-47250-A-41.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-47250-A-41.wav"; sourceTree = "<group>"; };
+		EBAD33C42885E5700093BE7D /* SoundRecognizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoundRecognizer.entitlements; sourceTree = "<group>"; };
 		EBB82EF824DCA9000039D1BB /* 1-48298-A-46.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-48298-A-46.wav"; sourceTree = "<group>"; };
 		EBB9D82224AB5A7800A3890E /* SoundRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB9D82424AB5A7800A3890E /* SoundRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecognizerTests.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		EBCD0E5A24A47AFE002737F4 /* SoundRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SoundRecognition.mlmodel; sourceTree = "<group>"; };
 		EBCD0E5F24A4DD8C002737F4 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		EBCD0E6124A4DDED002737F4 /* SoundRecognizerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecognizerEngine.swift; sourceTree = "<group>"; };
+		EBF20B8B2888945200E5D5B9 /* SaveDocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDocumentPicker.swift; sourceTree = "<group>"; };
 		EBF20C0224C59C8700AD668D /* 1-84393-A-32.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "1-84393-A-32.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +142,7 @@
 		EB6013E223B6168900DDCB3D /* SoundRecognizer */ = {
 			isa = PBXGroup;
 			children = (
+				EBAD33C42885E5700093BE7D /* SoundRecognizer.entitlements */,
 				EB6013F723B616AB00DDCB3D /* Source */,
 				EB6013F823B616B400DDCB3D /* Resources */,
 				EB6013EB23B6168B00DDCB3D /* Preview Content */,
@@ -210,6 +214,7 @@
 			children = (
 				EB6013E723B6168900DDCB3D /* MainView.swift */,
 				EB60142723B6518C00DDCB3D /* MainViewModel.swift */,
+				EBF20B8B2888945200E5D5B9 /* SaveDocumentPicker.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -435,6 +440,7 @@
 				EB6013E423B6168900DDCB3D /* AppDelegate.swift in Sources */,
 				EBCD0E6024A4DD8C002737F4 /* CategoryRepository.swift in Sources */,
 				EB6013E623B6168900DDCB3D /* SceneDelegate.swift in Sources */,
+				EBF20B8C2888945200E5D5B9 /* SaveDocumentPicker.swift in Sources */,
 				EB60142123B63EBF00DDCB3D /* AudioSampler.swift in Sources */,
 				EB60142823B6518C00DDCB3D /* MainViewModel.swift in Sources */,
 				EB60142223B63EBF00DDCB3D /* AudioRecorder.swift in Sources */,
@@ -526,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -580,7 +586,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -596,13 +602,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SoundRecognizer/SoundRecognizer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"SoundRecognizer/Preview Content\"";
-				DEVELOPMENT_TEAM = L9DCNBKQG8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SoundRecognizer/Resources/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,6 +618,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobacorn.SoundRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -622,12 +631,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SoundRecognizer/SoundRecognizer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SoundRecognizer/Preview Content\"";
-				DEVELOPMENT_TEAM = L9DCNBKQG8;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SoundRecognizer/Resources/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,6 +646,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobacorn.SoundRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -646,7 +658,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9DCNBKQG8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SoundRecognizerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -668,7 +680,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9DCNBKQG8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SoundRecognizerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (

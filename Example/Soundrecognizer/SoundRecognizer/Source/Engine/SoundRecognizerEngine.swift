@@ -21,17 +21,13 @@ public class SoundRecognizerEngine {
 
     public init(sampleRate: Int = 22050, windowLength length: Int) {
         let config = MLModelConfiguration()
+        config.computeUnits = .cpuOnly
         self.model = try? SoundRecognition.init(configuration: config)
         
         self.sampleRate = sampleRate
         self.melBasis = [Double].createMelFilter(sampleRate: sampleRate, FTTCount: 1024, melsCount: 128)
         self.windowLength = length
     }
-    
-    private var lstm_1_c_out: MLMultiArray? = nil
-    private var lstm_1_h_out: MLMultiArray? = nil
-    private var lstm_2_c_out: MLMultiArray? = nil
-    private var lstm_2_h_out: MLMultiArray? = nil
     
     public func predict(samples: [Double]) -> (percentage: Double, category: Int, title: String)? {
         var predicatedResult: (Double, Int, String)? = nil
@@ -48,10 +44,10 @@ public class SoundRecognizerEngine {
             let spectrogram = collectionToPredict.stft(nFFT: 1024, hopLength: 512).map { $0.map { pow($0.real, 2.0) + pow($0.imagine, 2.0) } }
             let melSpectrogram = self.melBasis.dot(matrix: spectrogram)
             
-            let powerSpectrogram = melSpectrogram.normalizeAudioPowerArray()
-            let filteredSpectrogram = powerSpectrogram//.map { $0[0..<161] }
+            let powerSpectrogram = melSpectrogram//.normalizeAudioPowerArray()
+            let filteredSpectrogram = powerSpectrogram
 
-            let mlArray = try? MLMultiArray(shape: [NSNumber(value: 1), NSNumber(value: 128), NSNumber(value: 216)], dataType: MLMultiArrayDataType.double)
+            let mlArray = try? MLMultiArray(shape: [NSNumber(value: 1), NSNumber(value: 128), NSNumber(value: 216), NSNumber(value: 1)], dataType: MLMultiArrayDataType.double)
 
             let flatSpectrogram = filteredSpectrogram.flatMap { $0 }
             for index in 0..<flatSpectrogram.count {
@@ -59,14 +55,14 @@ public class SoundRecognizerEngine {
             }
             
             do {
-                let input  = SoundRecognitionInput(input1: mlArray!)
+                let input  = SoundRecognitionInput(conv2d_7_input: mlArray!)
                 let options = MLPredictionOptions()
                 options.usesCPUOnly = true
                 let result = try model?.prediction(input: input, options: options)
                 
                 var array = [Double]()
-                for index in 0..<(result?.output1.count ?? 0) {
-                    array.append(result?.output1[index].doubleValue ?? 0.0)
+                for index in 0..<(result?.Identity.count ?? 0) {
+                    array.append(result?.Identity[index].doubleValue ?? 0.0)
                 }
 
                 let maxPercentage = array.reduce(0) { max($0, $1) }
@@ -80,14 +76,6 @@ public class SoundRecognizerEngine {
                 var infoString = ""
 
                 let categoryName = CategoryRepository.indexToCategoryMap[category] ?? "\(category)"
-                if category > 0 {
-                    let categoryName = categoryName
-                    infoString = "Engine Category: \(categoryName)(\(category)) Percentage: \(Int(maxPercentage*100))%, 2nd: \(secondCategory) - \(secondPercentage)"
-                  
-                    print(infoString)
-                }
-                
-                
                 
                 predicatedResult = (maxPercentage, category, categoryName)
             }

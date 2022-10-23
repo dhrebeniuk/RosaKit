@@ -13,16 +13,43 @@ struct MainView: View {
 
     var body: some View {
         VStack {
-            if (viewModel.percentage > 0) {
-                Text("Sound category:\n")
-                Text("\(viewModel.categoryTitle) (\(viewModel.categoryIndex))")
-                Text("\(viewModel.percentage) %")
+            
+            switch viewModel.state {
+            case .initial:
+                Text("")
+            case .downloading:
+                Text("Downloading Dataset...")
+            case .unzip:
+                Text("Unzipping...")
+            case .processing:
+                Text("Percentage Proceccesed: \(viewModel.percentageProceccesed * 100)%")
+                Text("Percentage Valid: \(viewModel.percentageValid * 100)%")
+                Text("Percentage Invalid: \(viewModel.percentageInvalid * 100)%")
+                
+                ScrollView {
+                    ForEach(self.viewModel.problemPreditions, id: \.self) { problemPrediction in
+                        HStack {
+                            Text("FileName: \(problemPrediction.fileName)")
+                            Text("Predicted: \(problemPrediction.predictedCategory)")
+                            Text("(\(problemPrediction.percentage))")
+                            Text("Target: \(problemPrediction.targetCategory)")
+                            
+                            Spacer()
+                            Button("Save Wave") {
+                                viewModel.copyWave(toClipboard: problemPrediction)
+                            }.padding()
+                            
+                            Button("Save STFT") {
+                                viewModel.copySTFT(toClipboard: problemPrediction)
+                            }.padding()
+                        }.sheet(isPresented: $viewModel.showFileExportPicker) {
+                            SaveDocumentPicker(url: $viewModel.fileExportURL)
+                        }
+                    }
+                }
             }
-            else {
-                Text("Loading...")
-            }
+            
         }
-        
     }
 }
 
