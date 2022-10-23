@@ -6,5 +6,6 @@ target "NoiseReductionExample" do
     inhibit_all_warnings!
 
     pod 'RosaKit', :path => '../../'
+    pod 'PlainPocketFFT', :path => '../../../plain-pocketfft'
 end
 
