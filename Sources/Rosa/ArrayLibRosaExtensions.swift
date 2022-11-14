@@ -233,7 +233,7 @@ extension Array where Element == [Double] {
         let rfftRows = newMatrixRows/2 + 1
         let rfftCount = rfftRows*newMatrixCols + newMatrixCols + 1
 
-        let flatMatrix = self.flatMap { return $0 }
+        let flatMatrix = self.transposed.flatMap { return $0 }
          
         let size = (1 + newMatrixCols/2)*newMatrixRows
         let length = vDSP_Length(pow(2, floor(log2(Float(size)))))
@@ -246,8 +246,8 @@ extension Array where Element == [Double] {
 
          vDSP_DFT_ExecuteD(setup!, flatMatrix, inputImaginary, &outputReal, &outputImaginary)
 
-        let resultRealMatrix = outputReal.chunked(into: newMatrixCols)//.transposed
-        let resultImagineMatrix = outputImaginary.chunked(into: newMatrixCols)//.transposed
+        let resultRealMatrix = outputReal.chunked(into: newMatrixCols)
+        let resultImagineMatrix = outputImaginary.chunked(into: newMatrixCols)
 
         var result = [[(real: Double, imagine: Double)]]()
         for row in 0..<rfftRows {
