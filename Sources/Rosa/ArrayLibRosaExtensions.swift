@@ -79,7 +79,7 @@ public extension Array where Iterator.Element: FloatingPoint {
 
 public extension Array where Element == Double {
     
-    func stft(nFFT: Int = 256, hopLength: Int = 1024) -> [[(real: Double, imagine: Double)]] {
+    func stft(nFFT: Int = 256, hopLength: Int = 1024, isAccelerated: Bool = false) -> [[(real: Double, imagine: Double)]] {
         let FFTWindow = [Double].getHannWindow(frameLength: (nFFT)).map { [$0] }
 
         let centered = self.reflectPad(fftSize: nFFT)
@@ -87,9 +87,9 @@ public extension Array where Element == Double {
         let yFrames = centered.frame(frameLength: nFFT, hopLength: hopLength)
 
         let matrix = FFTWindow.multiplyVector(matrix: yFrames)
-                
-        let rfftMatrix = matrix.rfft
-                        
+                                        
+        let rfftMatrix = isAccelerated ? matrix.acceleratedRFFT : matrix.rfft
+        
         let result = rfftMatrix
         
         return result
