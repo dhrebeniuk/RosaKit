@@ -9,6 +9,7 @@
 import Foundation
 import PocketFFT
 import PlainPocketFFT
+import Accelerate
 
 
 public extension Array where Iterator.Element: FloatingPoint {
